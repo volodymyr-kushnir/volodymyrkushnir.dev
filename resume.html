@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>VK &mdash; Résumé • 0.0.7</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="subject" content="This is just a résumé.">
+	<meta name="description" content="My very own personal website.">
+	<meta name="robots" content="index,follow,noodp">
+	<meta name="googlebot" content="index,follow">
+	<meta name="google" content="nositelinkssearchbox">
+	<meta name="google" content="notranslate">
+	<base href="http://volodymyrkushnir.com/resume.html">
+	<link rel="me" href="https://www.fb.com/volodyakushnir" type="text/html">
+	<link rel="me" href="mailto:volodymyr.kushnir@me.com">
+	<link rel="me" href="skype:volodymyr_kushnir">
+	<link rel="me" href="tel:+380952600797">
+	<meta property="og:url" content="http://volodymyrkushnir.com/resume.html" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Résumé" />
+	<meta property="og:description" content="Whatever wayfarers man braid readymade, tousled gochujang keytar iceland austin banjo cred." />
+	<meta property="og:image" content="http://volodymyrkushnir.com/avatar.gif" />
+	<meta property="og:locale" content="en_US">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=latin-ext">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css">
+	<style>
+		body { font-weight: 300; font-family: 'Open Sans'; }
+		strong { font-weight: 600; }
+		h1, h2, h3 { text-transform: uppercase; }
+		h1 { font-weight: 300; font-size: 1.5em; font-family: 'Open Sans'; }
+		h2 { font-weight: 800; font-size: 2em; font-family: 'Open Sans'; letter-spacing: 0.22em; margin: 0; }
+		h2 + p { font-size: 1.33em; }
+		h3 { font-weight: 700; font-size: 1.33em; font-family: 'Open Sans'; letter-spacing: 0.16em; }
+		
+		#frame { position: absolute; left: -1em; top: -1em; right: -1em; bottom: -1em; z-index: -1; transition: border-color 0.2s ease-in-out; border-width: 1em; border-style: solid; }
+		#frame.midnight-blue { border-color: #2c3e50; }
+		#frame.chartreuse { border-color: #a5e221; }
+		@media only screen and (max-width: 767px) { #frame { opacity: 0; } }
+		#avatar { max-width: 15em; }
+
+		.contacts { list-style: none outside none; padding: 0; margin: 0; white-space: nowrap; }
+		.facebook { color: #3b5998; }
+		.mail { color: #000000; }
+		.skype { color: #00aff0; }
+		.phone { color: #000000; }
+		.ui.fitted.fat.divider { border-top: 0.25em solid rgba(10, 10, 10, 1); width: 33%; }
+		
+		.timeline > ul { list-style: none outside none; padding: 0; }
+		.timeline > ul > li > ul { list-style: disc outside none; padding-left: 1.5em; }
+		.timeline > ul > li { margin-top: 1.125em; }
+		.timeline > ul > li > p { margin: 0; }
+		.tags { font-weight: 400; font-family: 'Open Sans'; }
+		.tags p { font-size: 0.88em; }
+		
+		.language { color: inherit; white-space: nowrap; position: relative; }
+		.color { cursor: pointer; white-space: nowrap; position: relative; }
+		.color:before { content: ''; display: inline-block; border-radius: 100%; margin: 0.27em; height: 0.88em; width: 0.88em; vertical-align: top; position: relative; }
+		.color:after {  content: ''; display: block; position: absolute; left: 0; top: 0; height: 140%; width: 140%; transform: translate(-10%, -10%); transform-origin: center center; }
+		.color.midnight-blue:before { background-color: #2c3e50; }
+		.color.chartreuse:before { background-color: #a5e221; }
+		
+		p a { position: relative; -webkit-transition: color 0.2s; transition: color 0.2s; }
+		p a:before { position: absolute; top: auto; bottom: 0; left: 0; width: 100%; height: 1px; content: ''; background-color: #4183C4; -webkit-transition: all 0.2s; transition: all 0.2s; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: scaleX(0); transform: scaleX(0); }
+		p a:hover:before { background-color: #2C76BF; -webkit-transform: scaleX(1); transform: scaleX(1); }
+		
+		#grown-up { background: #c3c3c3; color: #ffffff; padding: 0 0.15em; border-radius: 3px; display: inline-block; height: 1em; line-height: 0.9em; outline: 0; transition: all 0.2s ease-in-out; }
+		#grown-up:hover { background: #b5b5b5; }
+		#grown-up:active { background: #a0a0a0; }
+		#childhood { display: none; position: relative; height: 100%; width: 100%; }
+		#childhood > div { padding: 1em; height: 100%; width: 100%; overflow: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; }
+		#childhood img { width: auto; height: 100%; display: inline-block; vertical-align: top; }
+		#childhood:target { display: block; }
+		#childhood:target ~ .ui.container { display: none; }
+			.close { position: absolute; z-index: 1; top: 2em; left: 2em; display: inline-block; width: 4em; height: 4em; overflow: hidden; }
+			.close:before, .close:after { content: ''; position: absolute; width: 100%; top: 50%; left: 0; margin-top: -1px; background: #ffffff; height: 1px; }
+			.close:before { -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); }
+			.close:after { -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); }
+	</style>
+</head>
+<body>
+	<div class="ui container">
+		<div class="ui basic segment"></div>
+		<div class="ui basic padded segment stackable grid">
+			<div id="frame" class="midnight-blue"></div>
+			<div class="ui center aligned row">
+				<div class="ui two wide column">
+					<img id="avatar" src="avatar.gif" alt="" role="presentation" width="100%" />
+				</div>
+				<div class="ui three wide computer four wide tablet middle aligned column">
+					<h1>Volodymyr <strong>Kushnir</strong></h1>
+				</div>
+				<div class="ui four wide computer six wide tablet right floated middle aligned column">
+					<ul class="contacts">
+						<li><a href="https://www.fb.com/volodyakushnir" rel="author" class="facebook"><small><i class="icon facebook square"></i><strong>https://www.fb.com/volodyakushnir</strong></small></a></li>
+						<li><a href="mailto:volodymyr.kushnir@me.com" rel="author" class="mail"><small><i class="icon mail outline"></i><strong>volodymyr.kushnir@me.com</strong></small></a></li>
+						<li><a href="skype:volodymyr_kushnir" rel="author" class="skype"><small><i class="icon skype"></i><strong>volodymyr_kushnir</strong></small></a></li>
+						<li><a href="tel:+380952600797" rel="author" class="phone"><small><i class="icon phone"></i><strong>+38 (095) 2600797</strong></small></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="ui mobile only row">
+				<div class="ui column">
+					<div class="ui fitted divider"></div>
+				</div>
+			</div>
+			<div class="ui row">
+				<div class="ui fourteen wide right floated column">
+					<div class="ui basic vertical segment">
+						<h2>Résumé</h2>
+						<p>&mdash; Hello! I’m skilled frontend developer with 7 years of experience in UI/UX design, application development, and database modeling. I strive to craft precise, responsive, fast, easy-to-use environments with both strong purpose and great looks.</p>
+					</div>
+				</div>
+			</div>
+			<div class="ui row">
+				<div class="ui sixteen wide column">
+					<div class="ui fitted fat divider"></div>
+				</div>
+			</div>
+			<div class="ui row">
+				<div class="ui ten wide column">
+					<div class="ui basic vertical segment timeline">
+						<h3>Experience</h3>
+						<ul>
+							<li>
+								<p><em>1<sup>st</sup> October 2016 &ndash; present</em></p>
+								<p><strong>Senior full-stack developer</strong> at <strong><a href="http://www.dutchstar.com/" rel="external">Dutchstar</a></strong></p>
+								<ul>
+									<li>build, test, and deploy applications written with React + Redux and Phalcon + MySQL</li>
+								</ul>
+							</li>
+							<li>
+								<p><em>25<sup>th</sup> May 2014 &ndash; forever</em></p>
+								<p><strong>Married</strong> to <strong>&#x1f469;&#x1f3fb; <a href="https://www.fb.com/mila.mandzyuk" rel="external">Lyudmyla Mandzyuk</a></strong></p>
+								<ul>
+									<li>do all the different things</li>
+								</ul>
+							</li>
+							<li>
+								<p><em>1<sup>st</sup> September 2012 &ndash; 30<sup>th</sup> September 2016</em></p>
+								<p><strong>Service Center Databases Lead</strong> at <strong><a href="http://www.sebn.com/en/" rel="external">Sumitomo Electric Bordnetze</a> Ukraine</strong></p>
+								<ul>
+									<li>managed MySQL multi-master clusters, Oracle failover clusters, Microsoft SQL mirrored/replicated servers (monitoring, backup/restore, users/groups/roles, schemas)</li>
+									<li>built and benchmarked fast, efficient SQL queries</li>
+									<li>optimized database engines, indexes, etc.</li>
+									<li>crafted web dashboards, reports using HTML, CSS, JavaScript, SQL</li>
+								</ul>
+							</li>
+							<li>
+								<p><em>1<sup>st</sup> February 2011 &ndash; 30<sup>th</sup> September 2016</em></p>
+								<p><strong>IT production subdivision manager</strong> at <strong><a href="http://www.sebn.com/en/" rel="external">Sumitomo Electric Bordnetze</a> Ukraine</strong></p>
+								<ul>
+									<li>designed computer-aided manufacturing processes</li>
+									<li>interconnected different production systems’ databases (push or pull data using replication, triggers, scheduled events, cron jobs)</li>
+									<li>built high-availability systems, minimized downtime</li>
+									<li>designed and built BDE (BetriebsDatenErfassung) &mdash; data aggregator system designed to assist in planning, manufacturing, monitoring and controlling</li>
+									<li>analyzed and transformed data</li>
+									<li>wrote docs, manuals, guidelines, and memos</li>
+								</ul>
+							</li>
+							<li>
+								<p><em>14<sup>th</sup> February 2008 &ndash; 31<sup>st</sup> January 2011</em></p>
+								<p><strong>Software engineer</strong> at <strong><a href="http://www.sebn.com/en/" rel="external">Sumitomo Electric Bordnetze</a> Ukraine</strong></p>
+								<ul>
+									<li>designed UI and UX for native applications and web pages</li>
+									<li>built simple apps to assist in manufacturing process using Delphi, VB, Java, HTML, CSS, JavaScript, PHP, SQL</li>
+									<li>managed Microsoft SQL, MySQL, and Firebird databases</li>
+								</ul>
+							</li>
+							<li>
+								<p><em>February 2006 &ndash; August 2007</em></p>
+								<p><strong>Graphic designer</strong> at <strong>Terminal</strong></p>
+								<ul>
+									<li>designed booklets, flyers, business cards, posters using Adobe CS (Photoshop, Illustrator, InDesign)</li>
+									<li>managed inkjet plotters and printers</li>
+									<li>built websites using Macromedia Dreamweaver, Macromedia Flash (ActionScript)</li>
+								</ul>
+							</li>
+							<li>
+								<p><em>April 2004 &ndash; December 2004</em></p>
+								<p><strong>System administrator</strong> at <strong>Pyramid</strong></p>
+								<ul>
+									<li>managed a network of dozen Windows workstations and one Linux gateway (DHCP, DNS, proxy, ACLs)</li>
+									<li>kept PCs health (install OS over PXE, backup/restore, antivirus, software updates, hardware upgrades etc.)</li>
+								</ul>
+							</li>
+							<li>
+								<a id="grown-up" href="#childhood" title="Show childhood photos">&#x25cf;&#x25cf;&#x25cf;</a> <em>couldn't do much really for the first few years...</em>
+							</li>
+							<li>
+								<p><em>6<sup>th</sup> October 1986</em></p>
+								<p><strong>Born</strong> in <strong>Ternopil, Ukraine</strong> <sup><em>&mdash; Thanks, mom and dad!</em></sup></p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="ui six wide column">
+					<div class="ui basic vertical segment tags">
+						<h3>Languages</h3>
+						<p><a href="/uk-ua" hreflang="uk" rel="alternate" class="language">&#x1f1fa;&#x1f1e6; UKRAINIAN</a> <a href="/ru-ru" hreflang="ru" rel="alternate" class="language">&#x1f1f7;&#x1f1fa; RUSSIAN</a> <span class="language">&#x1f1fa;&#x1f1f8; ENGLISH</span></p>
+					</div>
+					<div class="ui basic vertical segment tags">
+						<h3>Skills</h3>
+						<p>HTML CSS JS PHP BOILERPLATE BOOTSTRAP SEMANTIC UI LESS SASS JQUERY ANGULARJS REACT LODASH GRUNT GULP BOWER WEBPACK NODEJS NPM MICROSOFT OFFICE PHOTOSHOP ILLUSTRATOR DELPHI VB VBA VBSCRIPT LINUX WINDOWS MACOS MYSQL POSTGRESQL MICROSOFT SQL DB2 CCNA ITIL</p>
+					</div>
+					<div class="ui basic vertical segment tags">
+						<h3>Character</h3>
+						<p>EXPLORER STRAIGHTFORWARD DEVOTED PEDANTIC AGNOSTIC CONTENTIOUS PROCRASTINATOR RELEVANT EMPATHETIC STORYTELLER CONFIDENT CONSISTENT CHALLENGING</p>
+					</div>
+					<div class="ui basic vertical segment tags">
+						<h3>Likes&#x1f603;</h3>
+						<p>HUMOUR PATIENCE DOGS MOVIES AAPL FC BARCELONA JÄGERMEISTER L’VIV FRISBEE <span class="color midnight-blue">MIDNIGHT BLUE</span> ELECTROPOP CUCINA ITALIANA ‘80S SELF-EDUCATION DEMOCRACY ATTENTION TO DETAILS GRAMMAR SPELLCHECK SEMANTICS MINI-SERIES RYAN GOSLING EMMA STONE</p>
+					</div>
+					<div class="ui basic vertical segment tags">
+						<h3>Dislikes&#x1f61e;</h3>
+						<p>OWN BAD HABITS POLITICS RACISM ASS-KISSERS VODKA INCOMPETENCE ENVY GOLF <span class="color chartreuse">CHARTREUSE</span> INSECTS METRO PREJUDICE REALITY-SHOWS JŪRMALA</p>
+					</div>
+					<div class="ui basic vertical segment timeline">
+						<h3>Education</h3>
+						<ul>
+							<li>
+								<p><em>December 2005 &ndash; April 2006</em></p>
+								<p><strong>Certificates of CCNA Course Completion</strong> at <strong>Cisco Networking Academy Program</strong></p></li>
+							<li>
+								<p><em>1<sup>st</sup> September 2003 &ndash; 30<sup>th</sup> June 2008</em></p>
+								<p><strong>Bachelor's degree</strong> in <strong>computer science</strong> at <strong>Ternopil National Technical University</strong>
+							</li>
+							<li>
+								<p><em>1<sup>st</sup> October 1995 &ndash; 23<sup>rd</sup> May 1999</em></p>
+								<p><strong>Certificate of graduation</strong> at <strong>Ternopil Art School for Children</strong></p>
+							</li>
+							<li>
+								<p><em>1<sup>st</sup> September 1993 &ndash; 21<sup>st</sup> June 2003</em></p>
+								<p><strong>Certificate of graduation</strong> at <strong>№20 Middle School of General Education</strong></p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ui basic segment">
+			<div class="ui divider"></div>
+		</div>
+	</div>
+	<div id="childhood">
+		<a href="#grown-up" title="Hide childhood photos" class="close"></a>
+		<div id="pics">
+			<img src="./assets/467536_170309526420601_636909857_o.jpg" alt="1" />
+			<img src="./assets/323856_148624698589084_1191150964_o.jpg" alt="2" />
+			<img src="./assets/329642_148624421922445_2060074436_o.jpg" alt="3" />
+			<img src="./assets/331152_148624551922432_1869335234_o.jpg" alt="4" />
+			<img src="./assets/324164_148624265255794_446501669_o.jpg" alt="5" />
+			<img src="./assets/327086_148624111922476_1330178874_o.jpg" alt="6" />
+			<img src="./assets/470468_170309399753947_1333978849_o.jpg" alt="7" />
+			<img src="./assets/323868_148639808587573_1648505013_o.jpg" alt="8" />
+			<img src="./assets/466052_170309293087291_793458215_o.jpg" alt="9" />
+			<img src="./assets/412746_158114720973415_949035392_o.jpg" alt="10" />
+			<img src="./assets/473110_173999982718222_1427466111_o.jpg" alt="11" />
+			<img src="./assets/471025_173999919384895_1249822733_o.jpg" alt="12" />
+			<img src="./assets/476877_173999862718234_1686531489_o.jpg" alt="13" />
+			<img src="./assets/461737_173999722718248_1691527332_o.jpg" alt="14" />
+		</div>
+	</div>
+	<div class="ui fluid container" style="background-color: #F2F2F2;">
+		&mdash; Hey.
+	</div>
+	<script>
+		document.querySelector('.color.midnight-blue').addEventListener('click', function() {
+			document.querySelector('#frame').className = 'midnight-blue';
+		});
+		document.querySelector('.color.chartreuse').addEventListener('click', function() {
+			document.querySelector('#frame').className = 'chartreuse';
+		});
+	</script>
+</body>
+</html>
