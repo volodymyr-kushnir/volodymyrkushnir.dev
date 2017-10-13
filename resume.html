@@ -38,10 +38,8 @@
 		a[rel="external"]:not(.label) { position: relative; white-space: nowrap; -webkit-transition: color 0.2s; transition: color 0.2s; }
 		a[rel="external"]:not(.label):before { position: absolute; top: auto; bottom: 0; left: 0; width: 100%; height: 1px; content: ''; background-color: blue; -webkit-transition: all 0.2s; transition: all 0.2s; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: scaleX(0); transform: scaleX(0); }
 		a[rel="external"]:not(.label):hover:before { background-color: blue; -webkit-transform: scaleX(1); transform: scaleX(1); }
-		
-		.ui.bulleted.list .list > .item:before, .ui.bulleted.list > .item:before, ul.ui.list li:before { content: '\25cf'; }
-		.ui.horizontal.bulleted.list>.item, ul.ui.horizontal.bulleted.list li { margin-left: 1.5rem; }
-		.ui.bulleted.list .list>.item:before, .ui.bulleted.list>.item:before, ul.ui.list li:before { margin-left: -1rem; }
+		.ui.bulleted.list .list > .item:before, .ui.bulleted.list > .item:before, ul.ui.list li:before { content: '\25cf'; margin-left: -1rem; }
+		.ui.horizontal.bulleted.list > .item, ul.ui.horizontal.bulleted.list li { margin-left: 1.5rem; }
 		.ui.fitted.fat.divider { border-top: 0.25em solid rgba(10, 10, 10, 1); width: 33%; }
 		.ui.labels > .label { font-weight: 600; }
 		.ui.labels.fitted > .label { display: block; float: left; }
