@@ -51,7 +51,7 @@
 		}
 		@media only screen and (min-width: 768px) and (max-width: 991px) {
 			#desktop { margin: calc((100% - 723px) / 2) 0; }
-    }		
+		}		
 		@media only screen and (min-width: 992px) and (max-width: 1199px) {
 			#desktop { margin: calc((100% - 933px) / 2) 0; }
 		}		
@@ -121,7 +121,7 @@
 		#childhood:target { display: block; }
 		#childhood:target ~ .ui.container { display: none; }
 		
-		.close { position: absolute; z-index: 1; top: 2em; left: 2em; display: inline-block; width: 4em; height: 4em; overflow: hidden; }
+		.close { text-indent: -9999px; position: absolute; z-index: 1; top: 2em; left: 2em; display: inline-block; width: 4em; height: 4em; overflow: hidden; }
 		.close:before, .close:after { content: ''; position: absolute; width: 100%; top: 50%; left: 0; margin-top: -1px; background: white; height: 1px; }
 		.close:before { -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); }
 		.close:after { -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); }
@@ -129,7 +129,7 @@
 </head>
 <body>
 	<div id="childhood">
-		<a href="#grown-up" title="Hide childhood photos" class="close"></a>
+		<a href="#grown-up" title="Hide childhood photos" class="close">Close</a>
 		<div id="pics">
 			<img src="./assets/photos/467536_170309526420601_636909857_o.jpg" alt="Me as a baby" />
 			<img src="./assets/photos/323856_148624698589084_1191150964_o.jpg" alt="Me with a guitar" />
@@ -399,7 +399,7 @@
 		document.querySelector('.color.chartreuse').addEventListener('click', function() {
 			document.querySelector('#frame').className = 'chartreuse';
 		});
-    document.querySelector('#meh').addEventListener('click', function() {
+		document.querySelector('#meh').addEventListener('click', function() {
 			this.childNodes[2].play();
 		});
 	</script>
