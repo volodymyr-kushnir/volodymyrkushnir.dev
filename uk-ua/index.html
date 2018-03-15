@@ -16,28 +16,58 @@
 	<link rel="me" href="mailto:volodymyr.kushnir@me.com">
 	<link rel="me" href="skype:volodymyr_kushnir">
 	<link rel="me" href="tel:+380952600797">
-	<meta property="og:url" content="http://volodymyrkushnir.com/" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Résumé" />
-	<meta property="og:description" content="&mdash; Hello! I’m skilled frontend developer with 7 years of experience in UI/UX design, application development, and database modeling. I strive to craft precise, responsive, fast, easy-to-use environments with both strong purpose and great looks." />
-	<meta property="og:image" content="http://volodymyrkushnir.com/images/avatar.gif" />
+	<meta property="og:url" content="http://volodymyrkushnir.com/">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Résumé">
+	<meta property="og:description" content="&mdash; Hello! I’m skilled frontend developer with 7 years of experience in UI/UX design, application development, and database modeling. I strive to craft precise, responsive, fast, easy-to-use environments with both strong purpose and great looks.">
+	<meta property="og:image" content="http://volodymyrkushnir.com/images/avatar.gif">
 	<meta property="og:locale" content="en_US">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=latin-ext">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/components/reset.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/components/header.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/components/container.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/components/segment.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/components/grid.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/components/divider.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/components/label.min.css">
 	<style>
 		::selection { background: yellow; }
 		::-moz-selection { background: yellow; }
-		body { font-weight: 300; font-family: 'Open Sans'; }
+
+		html { font-size: 14px; }
+		html, body { height: 100%; }
+		body { font-weight: 300; font-family: 'Open Sans'; line-height: 1.4285em; color: rgba(0, 0, 0, 0.87); }
 		strong { font-weight: 600; }
+		h1, h2, h3, h4, h5 { line-height: 1.28571429em; margin: calc(2rem -  0.14285714em ) 0em 1rem; font-weight: bold; padding: 0em; }
+		h1:first-child,
+		h2:first-child,
+		h3:first-child,
+		h4:first-child,
+		h5:first-child {
+			margin-top: 0em;
+		}
+		h1:last-child,
+		h2:last-child,
+		h3:last-child,
+		h4:last-child,
+		h5:last-child {
+			margin-bottom: 0em;
+		}
 		h1, h2, h3 { text-transform: uppercase; }
-		h1 { font-weight: 900; font-size: 1.5em; font-family: 'Open Sans'; }
-		h2 { font-weight: 900; font-size: 3em; font-family: 'Open Sans'; letter-spacing: 0.25em; margin: 0; }
-		h2 + p { font-size: 1.5em; }
-		h3 { font-weight: 700; font-size: 1.33em; font-family: 'Open Sans'; letter-spacing: 0.16em; }
-		a, a:hover { color: blue; }
+		h1 { font-weight: 900; font-size: 1.5rem; font-family: 'Open Sans'; }
+		h2 { font-weight: 900; font-size: 3rem; font-family: 'Open Sans'; letter-spacing: 0.25em; margin: 0; }
+		h2 + p { font-size: 1.5rem; }
+		h3 { font-weight: 700; font-size: 1.25rem; font-family: 'Open Sans'; letter-spacing: 0.15em; }
+		h4 { font-size: 1.125rem; }
+		h5 { font-size: 1.0625rem; }
+		a, a:hover { color: blue; text-decoration: none; }
 		a[rel="external"]:not(.label) { position: relative; white-space: nowrap; -webkit-transition: color 0.2s; transition: color 0.2s; }
 		a[rel="external"]:not(.label):before { position: absolute; top: auto; bottom: 0; left: 0; width: 100%; height: 1px; content: ''; background-color: blue; -webkit-transition: all 0.2s; transition: all 0.2s; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: scaleX(0); transform: scaleX(0); }
 		a[rel="external"]:not(.label):hover:before { background-color: blue; -webkit-transform: scaleX(1); transform: scaleX(1); }
+		p { margin: 0em 0em 1em; line-height: 1.4285em; }
+		p:first-child { margin-top: 0em; }
+		p:last-child { margin-bottom: 0em; }
+		
 		.ui.bulleted.list .list > .item:before, .ui.bulleted.list > .item:before, ul.ui.list li:before { content: '\25cf'; margin-left: -1rem; }
 		.ui.horizontal.bulleted.list > .item, ul.ui.horizontal.bulleted.list li { margin-left: 1.5rem; }
 		.ui.fitted.fat.divider { border-top: 0.25em solid rgba(10, 10, 10, 1); width: 33%; }
