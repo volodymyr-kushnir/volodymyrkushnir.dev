@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ru">
 <head>
-	<title>VK &mdash; Résumé • 0.0.10</title>
+	<title>VK &mdash; Résumé • 0.0.11</title>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,28 +16,58 @@
 	<link rel="me" href="mailto:volodymyr.kushnir@me.com">
 	<link rel="me" href="skype:volodymyr_kushnir">
 	<link rel="me" href="tel:+380952600797">
-	<meta property="og:url" content="http://volodymyrkushnir.com/" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Résumé" />
-	<meta property="og:description" content="&mdash; Hello! I’m skilled frontend developer with 7 years of experience in UI/UX design, application development, and database modeling. I strive to craft precise, responsive, fast, easy-to-use environments with both strong purpose and great looks." />
-	<meta property="og:image" content="http://volodymyrkushnir.com/images/avatar.gif" />
+	<meta property="og:url" content="http://volodymyrkushnir.com/">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Résumé">
+	<meta property="og:description" content="&mdash; Hello! I’m skilled frontend developer with 7 years of experience in UI/UX design, application development, and database modeling. I strive to craft precise, responsive, fast, easy-to-use environments with both strong purpose and great looks.">
+	<meta property="og:image" content="http://volodymyrkushnir.com/images/avatar.gif">
 	<meta property="og:locale" content="en_US">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=latin-ext">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/components/reset.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/components/header.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/components/container.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/components/segment.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/components/grid.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/components/divider.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/components/label.min.css">
 	<style>
-		::selection {	background: yellow; }
-		::-moz-selection {	background: yellow; }
-		body { font-weight: 300; font-family: 'Open Sans'; }
+		::selection { background: yellow; }
+		::-moz-selection { background: yellow; }
+
+		html { font-size: 14px; }
+		html, body { height: 100%; }
+		body { font-weight: 300; font-family: 'Open Sans'; line-height: 1.4285em; color: rgba(0, 0, 0, 0.87); }
 		strong { font-weight: 600; }
+		h1, h2, h3, h4, h5 { line-height: 1.28571429em; margin: calc(2rem -  0.14285714em ) 0em 1rem; font-weight: bold; padding: 0em; }
+		h1:first-child,
+		h2:first-child,
+		h3:first-child,
+		h4:first-child,
+		h5:first-child {
+			margin-top: 0em;
+		}
+		h1:last-child,
+		h2:last-child,
+		h3:last-child,
+		h4:last-child,
+		h5:last-child {
+			margin-bottom: 0em;
+		}
 		h1, h2, h3 { text-transform: uppercase; }
-		h1 { font-weight: 900; font-size: 1.5em; font-family: 'Open Sans'; }
-		h2 { font-weight: 900; font-size: 3em; font-family: 'Open Sans'; letter-spacing: 0.25em; margin: 0; }
-		h2 + p { font-size: 1.5em; }
-		h3 { font-weight: 700; font-size: 1.33em; font-family: 'Open Sans'; letter-spacing: 0.16em; }
-		a, a:hover { color: blue; }
+		h1 { font-weight: 900; font-size: 1.5rem; font-family: 'Open Sans'; }
+		h2 { font-weight: 900; font-size: 3rem; font-family: 'Open Sans'; letter-spacing: 0.25em; margin: 0; }
+		h2 + p { font-size: 1.5rem; }
+		h3 { font-weight: 700; font-size: 1.25rem; font-family: 'Open Sans'; letter-spacing: 0.15em; }
+		h4 { font-size: 1.125rem; }
+		h5 { font-size: 1.0625rem; }
+		a, a:hover { color: blue; text-decoration: none; }
 		a[rel="external"]:not(.label) { position: relative; white-space: nowrap; -webkit-transition: color 0.2s; transition: color 0.2s; }
 		a[rel="external"]:not(.label):before { position: absolute; top: auto; bottom: 0; left: 0; width: 100%; height: 1px; content: ''; background-color: blue; -webkit-transition: all 0.2s; transition: all 0.2s; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: scaleX(0); transform: scaleX(0); }
 		a[rel="external"]:not(.label):hover:before { background-color: blue; -webkit-transform: scaleX(1); transform: scaleX(1); }
+		p { margin: 0em 0em 1em; line-height: 1.4285em; }
+		p:first-child { margin-top: 0em; }
+		p:last-child { margin-bottom: 0em; }
+		
 		.ui.bulleted.list .list > .item:before, .ui.bulleted.list > .item:before, ul.ui.list li:before { content: '\25cf'; margin-left: -1rem; }
 		.ui.horizontal.bulleted.list > .item, ul.ui.horizontal.bulleted.list li { margin-left: 1.5rem; }
 		.ui.fitted.fat.divider { border-top: 0.25em solid rgba(10, 10, 10, 1); width: 33%; }
@@ -51,7 +81,7 @@
 		}
 		@media only screen and (min-width: 768px) and (max-width: 991px) {
 			#desktop { margin: calc((100% - 723px) / 2) 0; }
-    }		
+		}		
 		@media only screen and (min-width: 992px) and (max-width: 1199px) {
 			#desktop { margin: calc((100% - 933px) / 2) 0; }
 		}		
@@ -68,17 +98,13 @@
 		#name { margin-bottom: 0; }
 		#contacts { list-style: none outside none; padding: 0; margin: 0; white-space: nowrap; font-weight: 400; }
 		#contacts li { margin-bottom: 0.25em; margin-right: 1em; float: left; }
-		#contacts li a .icon { height: 16px; width: 16px; vertical-align: middle; }
+		#contacts li a { display: flex; align-items: center; line-height: 1em; padding: 2px; border-radius: 2px; overflow: hidden; }
+		#contacts li a .icon { fill: currentColor; height: 16px; width: 16px; margin-right: 3px; }
 		#contacts li a.facebook { color: #3b5998; }
-		#contacts li a.facebook .icon { fill: #3b5998; }
 		#contacts li a.github { color: black; }
-		#contacts li a.github .icon { fill: black; }
 		#contacts li a.mail { color: black; }
-		#contacts li a.mail .icon { fill: black; }
 		#contacts li a.skype { color: #00aff0; }
-		#contacts li a.skype .icon { fill: #00aff0; }
 		#contacts li a.phone { color: black; }
-		#contacts li a.phone .icon { fill: black; }
 		
 		@media only screen and (max-width: 767px) {
 			#frame { opacity: 0; }
@@ -90,6 +116,9 @@
 			#contacts li { float: none; }
 		}
 		
+		.packages > summary { cursor: pointer; }
+		.packages > .labels { margin-top: 0.5em; }
+		.packages > .labels:after { content: ''; clear: both; display: block; }
 		.timeline > ul { list-style: none outside none; padding: 0; }
 		.timeline > ul > li > ul { list-style: disc outside none; padding-left: 1.5em; }
 		.timeline > ul > li { margin-top: 1.125em; }
@@ -98,19 +127,20 @@
 		.tags p { font-size: 0.88em; }
 		.language { color: inherit; white-space: nowrap; position: relative; }
 		a.language { font-weight: 600; }
-		.color { cursor: pointer; white-space: nowrap; position: relative; }
+
+		.color { cursor: pointer; white-space: nowrap; background: inherit; font: inherit; border: none; margin: 0; padding: 0; }
 		.color:before { content: ''; display: inline-block; border-radius: 100%; margin: 0.27em; height: 0.88em; width: 0.88em; vertical-align: top; position: relative; }
-		.color:after {  content: ''; display: block; position: absolute; left: 0; top: 0; height: 140%; width: 140%; transform: translate(-10%, -10%); transform-origin: center center; }
 		.color.midnightblue:before { background-color: midnightblue; }
 		.color.chartreuse:before { background-color: chartreuse; }
 		
-		#meh { cursor: pointer; }
+		#meh { cursor: pointer; background: inherit; font: inherit; border: none; margin: 0; padding: 0; }
 		#meh .icon { height: 16px; width: 16px; vertical-align: text-top; }
 		
-		#daily { overflow: auto; padding: 0; }
+		#daily { padding: 0; }
 		#daily li { display: block; float: left; }
 		#daily li:not(:last-child):after { content: '\25cf'; margin: 0 0.25rem; }
-		
+		#daily:after { content: ''; clear: both; display: block; }
+
 		#grown-up { background: #c3c3c3; color: white; padding: 0em 0.2em; border-radius: 3px; display: block; height: 1em; line-height: 0.9em; transition: all 0.2s ease-in-out; float: left; margin: 0.3em 0.5em 0 0; overflow: hidden; }
 		#grown-up:hover { background: #b5b5b5; }
 		#grown-up:active { background: #a0a0a0; }
@@ -120,15 +150,16 @@
 		#childhood img { width: auto; height: 100%; display: inline-block; vertical-align: top; }
 		#childhood:target { display: block; }
 		#childhood:target ~ .ui.container { display: none; }
-			.close { position: absolute; z-index: 1; top: 2em; left: 2em; display: inline-block; width: 4em; height: 4em; overflow: hidden; }
-			.close:before, .close:after { content: ''; position: absolute; width: 100%; top: 50%; left: 0; margin-top: -1px; background: white; height: 1px; }
-			.close:before { -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); }
-			.close:after { -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); }
+		
+		.close { text-indent: -9999px; position: absolute; z-index: 1; top: 2em; left: 2em; display: inline-block; width: 4em; height: 4em; overflow: hidden; }
+		.close:before, .close:after { content: ''; position: absolute; width: 100%; top: 50%; left: 0; margin-top: -1px; background: white; height: 1px; }
+		.close:before { -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); }
+		.close:after { -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); }
 	</style>
 </head>
 <body>
 	<div id="childhood">
-		<a href="#grown-up" title="Hide childhood photos" class="close"></a>
+		<a href="#grown-up" title="Hide childhood photos" class="close">Close</a>
 		<div id="pics">
 			<img src="./assets/photos/467536_170309526420601_636909857_o.jpg" alt="Me as a baby" />
 			<img src="./assets/photos/323856_148624698589084_1191150964_o.jpg" alt="Me with a guitar" />
@@ -218,30 +249,28 @@
 									<p><strong>Front End Developer</strong> at <strong><a href="https://binary-studio.com/" rel="external">Binary Studio</a></strong></p>
 									<ul>
 										<li>
-											<details>
-												<summary style="outline: none; cursor: pointer;">build, test, and deploy a frontend written with React + Redux</summary>
-												<div style="overflow: auto; padding: 0.5em 0 0;">
-													<div class="ui small labels fitted">
-														<a rel="external" class="ui label" href="https://github.com/facebookincubator/create-react-app">create-react-app</a>
-														<a rel="external" class="ui label" href="https://github.com/mzabriskie/axios">axios</a>
-														<a rel="external" class="ui label" href="https://github.com/JedWatson/classnames">classnames</a>
-														<a rel="external" class="ui label" href="https://github.com/lodash/lodash">lodash</a>
-														<a rel="external" class="ui label" href="https://github.com/moment/moment">moment</a>
-														<a rel="external" class="ui label" href="https://github.com/paularmstrong/normalizr">normalizr</a>
-														<a rel="external" class="ui label" href="https://github.com/sindresorhus/query-string">query-string</a>
-														<a rel="external" class="ui label" href="https://github.com/facebook/react">react</a>
-														<a rel="external" class="ui label" href="https://github.com/yahoo/react-intl">react-intl</a>
-														<a rel="external" class="ui label" href="https://github.com/reactjs/react-redux">react-redux</a>
-														<a rel="external" class="ui label" href="https://github.com/ReactTraining/react-router">react-router</a>
-														<a rel="external" class="ui label" href="https://github.com/reactjs/redux">redux</a>
-														<a rel="external" class="ui label" href="https://github.com/erikras/redux-form">redux-form</a>
-														<a rel="external" class="ui label" href="https://github.com/evgenyrodionov/redux-logger">redux-logger</a>
-														<a rel="external" class="ui label" href="https://github.com/redux-saga/redux-saga">redux-saga</a>
-														<a rel="external" class="ui label" href="https://github.com/gaearon/redux-thunk">redux-thunk</a>
-														<a rel="external" class="ui label" href="https://github.com/Semantic-Org/Semantic-UI-React">semantic-ui-react</a>
-														<a rel="external" class="ui label" href="https://github.com/sass/node-sass">node-sass</a>
-														<a rel="external" class="ui label" href="https://github.com/prettier/prettier">prettier</a>
-													</div>
+											<details class="packages">
+												<summary>build, test, and deploy a frontend written with React + Redux</summary>
+												<div class="ui small labels fitted">
+													<a rel="external" class="ui label" href="https://github.com/facebookincubator/create-react-app">create-react-app</a>
+													<a rel="external" class="ui label" href="https://github.com/mzabriskie/axios">axios</a>
+													<a rel="external" class="ui label" href="https://github.com/JedWatson/classnames">classnames</a>
+													<a rel="external" class="ui label" href="https://github.com/lodash/lodash">lodash</a>
+													<a rel="external" class="ui label" href="https://github.com/moment/moment">moment</a>
+													<a rel="external" class="ui label" href="https://github.com/paularmstrong/normalizr">normalizr</a>
+													<a rel="external" class="ui label" href="https://github.com/sindresorhus/query-string">query-string</a>
+													<a rel="external" class="ui label" href="https://github.com/facebook/react">react</a>
+													<a rel="external" class="ui label" href="https://github.com/yahoo/react-intl">react-intl</a>
+													<a rel="external" class="ui label" href="https://github.com/reactjs/react-redux">react-redux</a>
+													<a rel="external" class="ui label" href="https://github.com/ReactTraining/react-router">react-router</a>
+													<a rel="external" class="ui label" href="https://github.com/reactjs/redux">redux</a>
+													<a rel="external" class="ui label" href="https://github.com/erikras/redux-form">redux-form</a>
+													<a rel="external" class="ui label" href="https://github.com/evgenyrodionov/redux-logger">redux-logger</a>
+													<a rel="external" class="ui label" href="https://github.com/redux-saga/redux-saga">redux-saga</a>
+													<a rel="external" class="ui label" href="https://github.com/gaearon/redux-thunk">redux-thunk</a>
+													<a rel="external" class="ui label" href="https://github.com/Semantic-Org/Semantic-UI-React">semantic-ui-react</a>
+													<a rel="external" class="ui label" href="https://github.com/sass/node-sass">node-sass</a>
+													<a rel="external" class="ui label" href="https://github.com/prettier/prettier">prettier</a>
 												</div>
 											</details>
 										</li>
@@ -343,15 +372,15 @@
 						</div>
 						<div class="ui basic vertical segment tags">
 							<h3>Нравится&#x1f603;</h3>
-							<p>HUMOUR PATIENCE DOGS MOVIES AAPL ​DEMOCRACY FC BARCELONA JÄGERMEISTER L’VIV FRISBEE <span class="color midnightblue">MIDNIGHT BLUE</span> ELECTROPOP CUCINA ITALIANA ‘80S SELF-EDUCATION <span id="meh"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M576 256c0 100.586-53.229 189.576-134.123 239.04-7.532 4.606-17.385 2.241-21.997-5.304-4.609-7.539-2.235-17.388 5.304-21.997C496.549 424.101 544 345.467 544 256c0-89.468-47.452-168.101-118.816-211.739-7.539-4.609-9.913-14.458-5.304-21.997 4.608-7.539 14.456-9.914 21.997-5.304C522.77 66.424 576 155.413 576 256zm-96 0c0-66.099-34.976-124.572-88.133-157.079-7.538-4.611-17.388-2.235-21.997 5.302-4.61 7.539-2.236 17.388 5.302 21.998C418.902 152.963 448 201.134 448 256c0 54.872-29.103 103.04-72.828 129.779-7.538 4.61-9.912 14.459-5.302 21.998 4.611 7.541 14.462 9.911 21.997 5.302C445.024 380.572 480 322.099 480 256zm-138.14-75.117c-7.538-4.615-17.388-2.239-21.998 5.297-4.612 7.537-2.241 17.387 5.297 21.998C341.966 218.462 352 236.34 352 256s-10.034 37.538-26.841 47.822c-7.538 4.611-9.909 14.461-5.297 21.998 4.611 7.538 14.463 9.909 21.998 5.297C368.247 314.972 384 286.891 384 256s-15.753-58.972-42.14-75.117zM256 88.017v335.964c0 21.436-25.942 31.999-40.971 16.971L126.059 352H24c-13.255 0-24-10.745-24-24V184c0-13.255 10.745-24 24-24h102.059l88.971-88.954C230.037 56.038 256 66.551 256 88.017zm-32 19.311l-77.659 77.644A24.001 24.001 0 0 1 129.372 192H32v128h97.372a24.001 24.001 0 0 1 16.969 7.028L224 404.67V107.328z"/></svg> MEH
+							<p>HUMOUR PATIENCE DOGS MOVIES AAPL ​DEMOCRACY FC BARCELONA JÄGERMEISTER L’VIV FRISBEE <button class="color midnightblue">MIDNIGHT BLUE</button> ELECTROPOP CUCINA ITALIANA ‘80S SELF-EDUCATION <button id="meh"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M576 256c0 100.586-53.229 189.576-134.123 239.04-7.532 4.606-17.385 2.241-21.997-5.304-4.609-7.539-2.235-17.388 5.304-21.997C496.549 424.101 544 345.467 544 256c0-89.468-47.452-168.101-118.816-211.739-7.539-4.609-9.913-14.458-5.304-21.997 4.608-7.539 14.456-9.914 21.997-5.304C522.77 66.424 576 155.413 576 256zm-96 0c0-66.099-34.976-124.572-88.133-157.079-7.538-4.611-17.388-2.235-21.997 5.302-4.61 7.539-2.236 17.388 5.302 21.998C418.902 152.963 448 201.134 448 256c0 54.872-29.103 103.04-72.828 129.779-7.538 4.61-9.912 14.459-5.302 21.998 4.611 7.541 14.462 9.911 21.997 5.302C445.024 380.572 480 322.099 480 256zm-138.14-75.117c-7.538-4.615-17.388-2.239-21.998 5.297-4.612 7.537-2.241 17.387 5.297 21.998C341.966 218.462 352 236.34 352 256s-10.034 37.538-26.841 47.822c-7.538 4.611-9.909 14.461-5.297 21.998 4.611 7.538 14.463 9.909 21.998 5.297C368.247 314.972 384 286.891 384 256s-15.753-58.972-42.14-75.117zM256 88.017v335.964c0 21.436-25.942 31.999-40.971 16.971L126.059 352H24c-13.255 0-24-10.745-24-24V184c0-13.255 10.745-24 24-24h102.059l88.971-88.954C230.037 56.038 256 66.551 256 88.017zm-32 19.311l-77.659 77.644A24.001 24.001 0 0 1 129.372 192H32v128h97.372a24.001 24.001 0 0 1 16.969 7.028L224 404.67V107.328z"/></svg> MEH
 								<audio>
 									<source src="./assets/sounds/meh.mp3" type="audio/mpeg">
 								</audio>
-							</span> ATTENTION TO DETAILS GRAMMAR SPELLCHECK SEMANTICS MINI-SERIES RYAN GOSLING EMMA STONE ​CURAPROX 5460</p>
+							</button> ATTENTION TO DETAILS GRAMMAR SPELLCHECK SEMANTICS MINI-SERIES RYAN GOSLING EMMA STONE ​CURAPROX 5460</p>
 						</div>
 						<div class="ui basic vertical segment tags">
 							<h3>Не нравится&#x1f61e;</h3>
-							<p>OWN BAD HABITS POLITICS RACISM ASS-KISSERS VODKA INCOMPETENCE ARROGANCE ENVY GOLF <span class="color chartreuse">CHARTREUSE</span> INSECTS METRO PREJUDICE REALITY-SHOWS JŪRMALA</p>
+							<p>OWN BAD HABITS POLITICS RACISM ASS-KISSERS VODKA INCOMPETENCE ARROGANCE ENVY GOLF <button class="color chartreuse">CHARTREUSE</button> INSECTS METRO PREJUDICE REALITY-SHOWS JŪRMALA</p>
 						</div>
 						<div class="ui basic vertical segment timeline">
 							<h3>Обучение</h3>
@@ -400,7 +429,7 @@
 		document.querySelector('.color.chartreuse').addEventListener('click', function() {
 			document.querySelector('#frame').className = 'chartreuse';
 		});
-    document.querySelector('#meh').addEventListener('click', function() {
+		document.querySelector('#meh').addEventListener('click', function() {
 			this.childNodes[2].play();
 		});
 	</script>
