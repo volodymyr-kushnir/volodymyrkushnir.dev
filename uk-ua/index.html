@@ -30,132 +30,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/components/grid.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/components/divider.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/components/label.min.css">
-	<style>
-		::selection { background: yellow; }
-		::-moz-selection { background: yellow; }
-
-		html { font-size: 14px; }
-		html, body { height: 100%; }
-		body { font-weight: 300; font-family: 'Open Sans'; line-height: 1.4285em; color: rgba(0, 0, 0, 0.87); }
-		strong { font-weight: 600; }
-		h1, h2, h3, h4, h5 { line-height: 1.28571429em; margin: calc(2rem -  0.14285714em ) 0em 1rem; font-weight: bold; padding: 0em; }
-		h1:first-child,
-		h2:first-child,
-		h3:first-child,
-		h4:first-child,
-		h5:first-child {
-			margin-top: 0em;
-		}
-		h1:last-child,
-		h2:last-child,
-		h3:last-child,
-		h4:last-child,
-		h5:last-child {
-			margin-bottom: 0em;
-		}
-		h1, h2, h3 { text-transform: uppercase; }
-		h1 { font-weight: 900; font-size: 1.5rem; font-family: 'Open Sans'; }
-		h2 { font-weight: 900; font-size: 3rem; font-family: 'Open Sans'; letter-spacing: 0.25em; margin: 0; }
-		h2 + p { font-size: 1.5rem; }
-		h3 { font-weight: 700; font-size: 1.25rem; font-family: 'Open Sans'; letter-spacing: 0.15em; }
-		h4 { font-size: 1.125rem; }
-		h5 { font-size: 1.0625rem; }
-		a, a:hover { color: blue; text-decoration: none; }
-		a[rel="external"]:not(.label) { position: relative; white-space: nowrap; -webkit-transition: color 0.2s; transition: color 0.2s; }
-		a[rel="external"]:not(.label):before { position: absolute; top: auto; bottom: 0; left: 0; width: 100%; height: 1px; content: ''; background-color: blue; -webkit-transition: all 0.2s; transition: all 0.2s; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: scaleX(0); transform: scaleX(0); }
-		a[rel="external"]:not(.label):hover:before { background-color: blue; -webkit-transform: scaleX(1); transform: scaleX(1); }
-		p { margin: 0em 0em 1em; line-height: 1.4285em; }
-		p:first-child { margin-top: 0em; }
-		p:last-child { margin-bottom: 0em; }
-		
-		.ui.bulleted.list .list > .item:before, .ui.bulleted.list > .item:before, ul.ui.list li:before { content: '\25cf'; margin-left: -1rem; }
-		.ui.horizontal.bulleted.list > .item, ul.ui.horizontal.bulleted.list li { margin-left: 1.5rem; }
-		.ui.fitted.fat.divider { border-top: 0.25em solid rgba(10, 10, 10, 1); width: 33%; }
-		.ui.labels > .label { font-weight: 600; }
-		.ui.labels.fitted > .label { display: block; float: left; }
-		
-		@media only screen and (max-width: 767px) {
-			.ui.container { margin: 0 !important; }
-			#desktop { margin: 0; }
-			#a4 { padding: 0; }
-		}
-		@media only screen and (min-width: 768px) and (max-width: 991px) {
-			#desktop { margin: calc((100% - 723px) / 2) 0; }
-		}		
-		@media only screen and (min-width: 992px) and (max-width: 1199px) {
-			#desktop { margin: calc((100% - 933px) / 2) 0; }
-		}		
-		@media only screen and (min-width: 1200px) {
-			#desktop { margin: calc((100% - 1127px) / 2) 0; }
-		}
-		
-		#a4 { border-radius: 0; border: none; box-shadow: 0 10px 100px 0 rgba(34,36,38,.1); transition: all 0.2s linear; }
-		#a4:hover { box-shadow: 0 10px 100px 0 rgba(34,36,38,.3); }
-		#frame { position: absolute; left: -1em; top: -1em; right: -1em; bottom: -1em; transition: border-color 0.2s ease-in-out; border-width: 1em; border-style: solid; }
-		#frame.midnightblue { border-color: midnightblue; }
-		#frame.chartreuse { border-color: chartreuse; }
-		#avatar { max-width: 15em; width: 100%; }
-		#name { margin-bottom: 0; }
-		#contacts { list-style: none outside none; padding: 0; margin: 0; white-space: nowrap; font-weight: 400; }
-		#contacts li { margin-bottom: 0.25em; margin-right: 1em; float: left; }
-		#contacts li a { display: flex; align-items: center; line-height: 1em; padding: 2px; border-radius: 2px; overflow: hidden; }
-		#contacts li a .icon { fill: currentColor; height: 16px; width: 16px; margin-right: 3px; }
-		#contacts li a.facebook { color: #3b5998; }
-		#contacts li a.github { color: black; }
-		#contacts li a.mail { color: black; }
-		#contacts li a.skype { color: #00aff0; }
-		#contacts li a.phone { color: black; }
-		
-		@media only screen and (max-width: 767px) {
-			#frame { opacity: 0; }
-			#name { text-align: center; }
-			#contacts { text-align: center; }
-		}
-		@media only screen and (max-width: 1199px) {
-			#name { margin-bottom: 1em; }
-			#contacts li { float: none; }
-		}
-		
-		.packages > summary { cursor: pointer; }
-		.packages > .labels { margin-top: 0.5em; }
-		.packages > .labels:after { content: ''; clear: both; display: block; }
-		.timeline > ul { list-style: none outside none; padding: 0; }
-		.timeline > ul > li > ul { list-style: disc outside none; padding-left: 1.5em; }
-		.timeline > ul > li { margin-top: 1.125em; }
-		.timeline > ul > li > p { margin: 0; }
-		.tags { font-weight: 400; font-family: 'Open Sans'; }
-		.tags p { font-size: 0.88em; }
-		.language { color: inherit; white-space: nowrap; position: relative; }
-		a.language { font-weight: 600; }
-
-		.color { cursor: pointer; white-space: nowrap; background: inherit; font: inherit; border: none; margin: 0; padding: 0; }
-		.color:before { content: ''; display: inline-block; border-radius: 100%; margin: 0.27em; height: 0.88em; width: 0.88em; vertical-align: top; position: relative; }
-		.color.midnightblue:before { background-color: midnightblue; }
-		.color.chartreuse:before { background-color: chartreuse; }
-		
-		#meh { cursor: pointer; background: inherit; font: inherit; border: none; margin: 0; padding: 0; }
-		#meh .icon { height: 16px; width: 16px; vertical-align: text-top; }
-		
-		#daily { padding: 0; }
-		#daily li { display: block; float: left; }
-		#daily li:not(:last-child):after { content: '\25cf'; margin: 0 0.25rem; }
-		#daily:after { content: ''; clear: both; display: block; }
-
-		#grown-up { background: #c3c3c3; color: white; padding: 0em 0.2em; border-radius: 3px; display: block; height: 1em; line-height: 0.9em; transition: all 0.2s ease-in-out; float: left; margin: 0.3em 0.5em 0 0; overflow: hidden; }
-		#grown-up:hover { background: #b5b5b5; }
-		#grown-up:active { background: #a0a0a0; }
-		
-		#childhood { display: none; position: relative; height: 100%; width: 100%; }
-		#childhood > div { padding: 1em; height: 100%; width: 100%; overflow: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; }
-		#childhood img { width: auto; height: 100%; display: inline-block; vertical-align: top; }
-		#childhood:target { display: block; }
-		#childhood:target ~ .ui.container { display: none; }
-		
-		.close { text-indent: -9999px; position: absolute; z-index: 1; top: 2em; left: 2em; display: inline-block; width: 4em; height: 4em; overflow: hidden; }
-		.close:before, .close:after { content: ''; position: absolute; width: 100%; top: 50%; left: 0; margin-top: -1px; background: white; height: 1px; }
-		.close:before { -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); }
-		.close:after { -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); }
-	</style>
+	<link rel="stylesheet" href="./assets/stylesheets/base.css">
 </head>
 <body>
 	<div id="childhood">
@@ -246,11 +121,40 @@
 							<ul>
 								<li>
 									<p><em>24<sup>го</sup> січня 2017 &ndash; сьогодні</em></p>
-									<p><strong>Front End Developer</strong> at <strong><a href="https://binary-studio.com/" rel="external">Binary Studio</a></strong></p>
+									<p><strong>Full Stack Developer</strong> у <strong><a href="https://binary-studio.com/" rel="external">Binary Studio</a></strong></p>
 									<ul>
+                    <li>
+                      <details class="packages">
+                        <summary>full-stack розробник &mdash; програмую, тестую і розгортаю до Amazon Web Services додатки, написані на Node.js, React, GraphQL і PostgreSQL</summary>
+                        <div class="ui small labels fitted">
+                          <a rel="external" class="ui label" href="https://github.com/apollographql/apollo-client">apollo-client</a>
+                          <a rel="external" class="ui label" href="https://github.com/jaredpalmer/formik">formik</a>
+                          <a rel="external" class="ui label" href="https://github.com/graphql/graphql-js">graphql</a>
+                          <a rel="external" class="ui label" href="https://github.com/apollographql/graphql-tag">graphql-tag</a>
+                          <a rel="external" class="ui label" href="https://github.com/ianstormtaylor/slate">slate</a>
+                          <a rel="external" class="ui label" href="https://github.com/transloadit/uppy">uppy</a>
+                          <a rel="external" class="ui label" href="https://github.com/jquense/yup">yup</a>
+                          <a rel="external" class="ui label" href="https://github.com/storybooks/storybook">storybook</a>
+                          <a rel="external" class="ui label" href="https://github.com/GoogleChrome/puppeteer">puppeteer</a>
+                          <a rel="external" class="ui label" href="https://github.com/visionmedia/debug">debug</a>
+                          <a rel="external" class="ui label" href="https://github.com/motdotla/dotenv">dotenv</a>
+                          <a rel="external" class="ui label" href="https://github.com/expressjs/express">express</a>
+                          <a rel="external" class="ui label" href="https://github.com/hapijs/joi">joi</a>
+                          <a rel="external" class="ui label" href="https://github.com/expressjs/morgan">morgan</a>
+                          <a rel="external" class="ui label" href="https://github.com/jaredhanson/passport">passport</a>
+                          <a rel="external" class="ui label" href="https://github.com/brianc/node-postgres">pg</a>
+                          <a rel="external" class="ui label" href="https://github.com/request/request">request</a>
+                          <a rel="external" class="ui label" href="https://github.com/graphile/postgraphile">postgraphile</a>
+                          <a rel="external" class="ui label" href="https://github.com/chaijs/chai">chai</a>
+                          <a rel="external" class="ui label" href="https://github.com/mochajs/mocha">mocha</a>
+                          <a rel="external" class="ui label" href="https://github.com/standard/standard">standard</a>
+                          <a rel="external" class="ui label" href="https://github.com/standard/snazzy">snazzy</a>
+                        </div>
+                      </details>
+                    </li>
 										<li>
 											<details class="packages">
-												<summary>build, test, and deploy a frontend written with React + Redux</summary>
+												<summary>програмував, тестував і розгортав фронтенд на основі React/Redux</summary>
 												<div class="ui small labels fitted">
 													<a rel="external" class="ui label" href="https://github.com/facebookincubator/create-react-app">create-react-app</a>
 													<a rel="external" class="ui label" href="https://github.com/mzabriskie/axios">axios</a>
@@ -271,88 +175,97 @@
 													<a rel="external" class="ui label" href="https://github.com/Semantic-Org/Semantic-UI-React">semantic-ui-react</a>
 													<a rel="external" class="ui label" href="https://github.com/sass/node-sass">node-sass</a>
 													<a rel="external" class="ui label" href="https://github.com/prettier/prettier">prettier</a>
+													<a rel="external" class="ui label" href="https://github.com/Codeception/codeceptjs">codeceptjs</a>
+													<a rel="external" class="ui label" href="https://github.com/segmentio/nightmare">nightmare</a>
 												</div>
 											</details>
 										</li>
-										<li>do some extra things from time to time</li>
+										<li>роблю ще інші речі час від часу</li>
 									</ul>
 								</li>
 								<li>
 									<p><em>1<sup>го</sup> жовтня 2016 &ndash; 31<sup>го</sup> грудня 2016</em></p>
-									<p><strong>Full Stack Developer</strong> at <strong><a href="http://www.dutchstar.com/" rel="external">Dutchstar</a></strong></p>
+									<p><strong>Full Stack Developer</strong> у <strong><a href="http://www.dutchstar.com/" rel="external">Dutchstar</a></strong></p>
 									<ul>
-										<li>built, tested, and deployed applications written with React + Redux and Phalcon + MySQL</li>
+										<li>будував, тестував і розгортав додатки, написані на React + Redux і Phalcon + MySQL</li>
 									</ul>
+                </li>
+                <li>
+                  <p><em>Десь у 2015-му</em></p>
+                  <p><strong>Лишив курити</strong> 🚭</p>
+                  <ul>
+                    <li>все ще полюбляю інколи їсти снеки й фастфуд і час від часу випивати стаканчик чогось</li>
+                  </ul>
 								</li>
 								<li>
 									<p><em>25<sup>го</sup> травня 2014 &ndash; завжди</em></p>
-									<p><strong>Married &#x1f469;&#x1f3fb; <a href="https://www.fb.com/mila.mandzyuk" rel="external">Lyudmyla Mandzyuk</a></strong></p>
+									<p><strong>Одружився</strong> із <strong><a href="https://www.fb.com/mila.mandzyuk" rel="external">Людмилою Мандзюк</a></strong> &#x1f469;&#x1f3fb;</p>
 									<ul>
-										<li>do all the different things</li>
+										<li>роблю все, що скаже</li>
 									</ul>
 								</li>
 								<li>
 									<p><em>1<sup>го</sup> вересня 2012 &ndash; 30<sup>го</sup> вересня 2016</em></p>
-									<p><strong>Service Center Databases Lead</strong> at <strong><a href="http://www.sebn.com/en/" rel="external">Sumitomo Electric Bordnetze</a> Ukraine</strong></p>
+									<p><strong>Service Center Databases Lead</strong> у <strong><a href="http://www.sebn.com/en/" rel="external">ТзОВ «СЕ Борднетце–Україна»</a></strong></p>
 									<ul>
-										<li>managed MySQL multi-master clusters, Oracle failover clusters, Microsoft SQL mirrored/replicated servers (monitoring, backup/restore, users/groups/roles, schemas)</li>
-										<li>built and benchmarked fast, efficient SQL queries</li>
-										<li>optimized database engines, indexes, etc.</li>
-										<li>crafted web dashboards, reports using HTML, CSS, JavaScript, SQL</li>
+										<li>обслуговував MySQL multi-master кластери, Oracle failover кластери, Microsoft SQL mirrored/replicated сервери (моніторинг, резервне копіювання і розгортання, користувачі/групи/ролі, схеми)</li>
+										<li>складав і оптимізовував швидкі, ефективні SQL-запити</li>
+										<li>оптимізовував бази даних, індекси, тощо</li>
+										<li>будував веб-дашборди, репорти, використовуючи HTML, CSS, JavaScript, SQL</li>
 									</ul>
 								</li>
 								<li>
 									<p><em>1<sup>го</sup> вересня 2011 &ndash; 30<sup>го</sup> вересня 2016</em></p>
-									<p><strong>IT production subdivision manager</strong> at <strong><a href="http://www.sebn.com/en/" rel="external">Sumitomo Electric Bordnetze</a> Ukraine</strong></p>
+									<p><strong>Керівник підвідділу виробничих систем відділу інформаційних технологій</strong> у <strong><a href="http://www.sebn.com/en/" rel="external">ТзОВ «СЕ Борднетце–Україна»</a></strong></p>
 									<ul>
-										<li>designed computer-aided manufacturing processes</li>
-										<li>interconnected different production systems’ databases (push or pull data using replication, triggers, scheduled events, cron jobs)</li>
-										<li>built high-availability systems, minimized downtime</li>
-										<li>designed and built BDE (BetriebsDatenErfassung) &mdash; data aggregator system designed to assist in planning, manufacturing, monitoring and controlling</li>
-										<li>analyzed and transformed data</li>
-										<li>wrote docs, manuals, guidelines, and memos</li>
+										<li>планував комп’ютеризовані виробничі процеси</li>
+										<li>поєднував бази даних різних виробничих систем (надсилав та отримував дані за допомогою реплікацій, триггерів, запланованих подій, cron-завдань)</li>
+										<li>складав системи високої доступності, мінімізував простої</li>
+										<li>спроектував і запрограмував BDE (BetriebsDatenErfassung) &mdash; систему агрегації даних, призначену для суттєвої автоматизації завдань з планування, виготовлення, моніторингу і контролю</li>
+										<li>аналізував та перетворював дані</li>
+										<li>писав документацію, мануали, ґайдлайни, мемо</li>
 									</ul>
 								</li>
 								<li>
 									<p><em>9<sup>го</sup> квітня 2008</em></p>
-									<p><strong>Was officially hired (employee #943)</strong> by <strong><a href="http://www.sebn.com/en/" rel="external">Sumitomo Electric Bordnetze</a> Ukraine</strong><br />(worked as a contractor previously)</p>
+									<p><strong>Був офіційно працевлаштованим (працівник №943)</strong> у <strong><a href="http://www.sebn.com/en/" rel="external">ТзОВ «СЕ Борднетце–Україна»</a></strong><br />(до того працював по цивільно-правовому договору)</p>
 								</li>
 								<li>
 									<p><em>14<sup>го</sup> лютого 2008 &ndash; 31<sup>го</sup> січня 2011</em></p>
-									<p><strong>Software engineer</strong> at <strong><a href="http://www.sebn.com/en/" rel="external">Sumitomo Electric Bordnetze</a> Ukraine</strong></p>
+									<p><strong>Інженер з програмного забезпечення</strong> у <strong><a href="http://www.sebn.com/en/" rel="external">ТзОВ «СЕ Борднетце–Україна»</a></strong></p>
 									<ul>
-										<li>designed UI and UX for native applications and web pages</li>
-										<li>built simple apps to assist in manufacturing process using Delphi, VB, Java, HTML, CSS, JavaScript, PHP, SQL</li>
-										<li>managed Microsoft SQL, MySQL, and Firebird databases</li>
+										<li>розробляв UI і UX для програм і веб-сторінок</li>
+										<li>програмував прості додатки, що допомагали у виробничих процесах, використовуючи Delphi, VB, Java, HTML, CSS, JavaScript, PHP, SQL</li>
+										<li>обслуговував бази даних Microsoft SQL, MySQL і Firebird</li>
 									</ul>
 								</li>
 								<li>
 									<p><em>лютий 2006 &ndash; серпень 2007</em></p>
-									<p><strong>Graphic designer</strong> at <strong>Terminal</strong></p>
+									<p><strong>Графічний дизайнер</strong> у <strong>Терміналі</strong></p>
 									<ul>
-										<li>designed booklets, flyers, business cards, posters using Adobe CS (Photoshop, Illustrator, InDesign)</li>
-										<li>managed inkjet plotters and printers</li>
-										<li>built websites using Macromedia Dreamweaver, Macromedia Flash (ActionScript)</li>
+										<li>верстав буклети, флайери, візитки, постери у Adobe CS (Photoshop, Illustrator, InDesign)</li>
+										<li>обслуговував струменеві і лазерні принтери та плоттер</li>
+										<li>конструював вебсайти у Macromedia Dreamweaver, Macromedia Flash (ActionScript)</li>
 									</ul>
 								</li>
 								<li>
 									<p><em>квітень 2004 &ndash; грудень 2004</em></p>
-									<p><strong>System administrator</strong> at <strong>Pyramid</strong></p>
+									<p><strong>Системний адміністратор</strong> у <strong>Піраміді</strong></p>
 									<ul>
-										<li>managed a network of dozen Windows workstations and one Linux gateway (DHCP, DNS, proxy, ACLs)</li>
-										<li>kept PCs health (install OS over PXE, backup/restore, antivirus, software updates, hardware upgrades etc.)</li>
+										<li>адміністрував мережу з біля десятка робочих станцій на Windows і одного мережевого шлюзу на Linux (DHCP, DNS, proxy, ACLs)</li>
+										<li>підтримував здоров’я комп’ютерів (встановлював ОС через PXE, проводив резервне копіювання, антивірусні перевірки, оновлення програмного забезпечення, заміну комплектуючих тощо)</li>
 									</ul>
 								</li>
 								<li>
 									<p><em>16<sup>го</sup> травня 2003</em></p>
-									<p><strong>Got my internal passport</strong> (with a traditionally awkward photo, of course) &mdash; can't wait to replace it with a new Passport of the Citizen of Ukraine</p>
+									<p><strong>Отримав вітчизняний паспорт</strong> (з традиційно дивакуватим фото, звичайно) &mdash; не можу дочекатися, аби замінити то на новий паспорт громадянина України</p>
 								</li>
 								<li>
-									<a id="grown-up" href="#childhood" title="Show childhood photos">&#x25cf;&#x25cf;&#x25cf;</a> <em>couldn't do much really for the first few years...</em>
+									<a id="grown-up" href="#childhood" title="Show childhood photos">&#x25cf;&#x25cf;&#x25cf;</a> <em>небагато міг зробити перших кілька років...</em>
 								</li>
 								<li>
 									<p><em>6<sup>го</sup> жовтня 1986</em></p>
-									<p><strong>Born</strong> in <strong>Ternopil, Ukraine</strong> <sup><em>&mdash; Thanks, mom and dad!</em></sup></p>
+									<p><strong>Народився</strong> у <strong>Тернополі, Україна</strong> <sup><em>&mdash; Дякую, мамо й тату!</em></sup></p>
 								</li>
 							</ul>
 						</div>
