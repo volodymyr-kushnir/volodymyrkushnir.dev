@@ -59,9 +59,9 @@
 		</div>
 	</div>
 	<div id="desktop" class="ui container">
-		<div class="ui very padded segment" id="a4">
+		<div class="ui very padded segment midnightblue" id="a4">
 			<div class="ui basic padded segment stackable grid">
-				<div id="frame" class="midnightblue"></div>
+				<div id="frame"></div>
 				<div class="ui row">
 					<div class="ui three wide center aligned column">
 						<div id="portrait-wrapper">
@@ -357,10 +357,12 @@
 	</div>
 	<script>
 		document.querySelector('.color.midnightblue').addEventListener('click', function() {
-			document.querySelector('#frame').className = 'midnightblue';
+			document.querySelector('#a4').classList.remove('chartreuse');
+      document.querySelector('#a4').classList.add('midnightblue');
 		});
 		document.querySelector('.color.chartreuse').addEventListener('click', function() {
-			document.querySelector('#frame').className = 'chartreuse';
+			document.querySelector('#a4').classList.add('chartreuse');
+      document.querySelector('#a4').classList.remove('midnightblue');
 		});
 		document.querySelector('#meh').addEventListener('click', function() {
 			this.childNodes[2].play();
