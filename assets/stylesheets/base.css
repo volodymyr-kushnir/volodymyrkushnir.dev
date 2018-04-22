@@ -64,50 +64,10 @@ p:last-child { margin-bottom: 0em; }
 #a4.chartreuse #portrait:before { background-color: chartreuse; }
 
 #frame { position: absolute; left: -1em; top: -1em; right: -1em; bottom: -1em; transition: border-color 0.2s ease-in-out; border-width: 1em; border-style: solid; }
-#portrait-wrapper { display: inline-block; padding: 0 1em; }
+#portrait-wrapper { padding: 0 1em; }
 #portrait { position: relative; max-width: 15em; }
-#portrait:before {
-	display: block;
-	content: '';
-	padding-top: 100%;
-	border-radius: 100%;
-	position: absolute;
-	left: 0;
-	width: 100%;
-	bottom: 0;
-	opacity: 0.5;
-}
-#mask {
-	position: absolute;
-	left: 0;
-	top: 0;
-	display: block;
-	height: 100%;
-	width: 100%;
-}
-#photo {
-	-webkit-clip-path: url(#mask-clip-path);
-	clip-path: url(#mask-clip-path);
-}
-#glasses {
-	position: absolute;
-	z-index: 2;
-	width: 56%;
-	left: 20.5%;
-	bottom: 46.5%;
-	transition: all 0.4s ease-in-out;
-	pointer-events: none;
-}
-#face {
-	width: 100%;
-	display: block;
-	position: relative;
-	top: 0;
-}
-#portrait:hover #glasses {
-	transform: rotate(90deg) translate3d(50%, 150%, 0);
-	transform-origin: top left;
-}
+#glasses { transition: all 0.4s ease-in-out; }
+#portrait:hover #glasses { transform: rotate(90deg) translate3d(50%, 150%, 0); transform-origin: top left; }
 #contacts { list-style: none outside none; display: flex; padding: 0; margin-top: 0; white-space: nowrap; font-size: 0.9em; font-weight: 400; }
 #contacts li { margin-bottom: 0.25rem; margin-right: 1em; height: calc(1.1428rem + 4px); }
 #contacts li a { display: inline-flex; align-items: center; line-height: 1.1428rem; padding: 2px; border-radius: 2px; overflow: hidden; }
