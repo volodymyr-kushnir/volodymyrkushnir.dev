@@ -21,8 +21,8 @@ h5:last-child {
   margin-bottom: 0em;
 }
 h1, h2, h3 { text-transform: uppercase; }
-h1 { font-weight: 900; font-size: 1.5rem; font-family: 'Open Sans'; }
-h2 { font-weight: 900; font-size: 3rem; font-family: 'Open Sans'; letter-spacing: 0.25em; margin: 0; }
+h1 { font-weight: 900; font-size: 1.5rem; font-family: 'Open Sans'; margin-bottom: 0; }
+h2 { font-weight: 900; font-size: 3rem; font-family: 'Open Sans'; letter-spacing: 0.25em; }
 h2 + p { font-size: 1.5rem; }
 h3 { font-weight: 700; font-size: 1.25rem; font-family: 'Open Sans'; letter-spacing: 0.15em; }
 h4 { font-size: 1.125rem; }
@@ -58,15 +58,59 @@ p:last-child { margin-bottom: 0em; }
 
 #a4 { border-radius: 0; border: none; box-shadow: 0 10px 100px 0 rgba(34,36,38,.1); transition: all 0.2s linear; }
 #a4:hover { box-shadow: 0 10px 100px 0 rgba(34,36,38,.3); }
+#a4.midnightblue #frame { border-color: midnightblue; }
+#a4.chartreuse #frame { border-color: chartreuse; }
+#a4.midnightblue #portrait:before { background-color: midnightblue; }
+#a4.chartreuse #portrait:before { background-color: chartreuse; }
+
 #frame { position: absolute; left: -1em; top: -1em; right: -1em; bottom: -1em; transition: border-color 0.2s ease-in-out; border-width: 1em; border-style: solid; }
-#frame.midnightblue { border-color: midnightblue; }
-#frame.chartreuse { border-color: chartreuse; }
-#avatar { max-width: 15em; width: 100%; }
-#name { margin-bottom: 0; }
-#contacts { list-style: none outside none; padding: 0; margin: 0; white-space: nowrap; font-weight: 400; }
-#contacts li { margin-bottom: 0.25em; margin-right: 1em; float: left; }
-#contacts li a { display: flex; align-items: center; line-height: 1em; padding: 2px; border-radius: 2px; overflow: hidden; }
-#contacts li a .icon { fill: currentColor; height: 16px; width: 16px; margin-right: 3px; }
+#portrait-wrapper { display: inline-block; padding: 0 1em; }
+#portrait { position: relative; max-width: 15em; }
+#portrait:before {
+  display: block;
+  content: '';
+  padding-top: 100%;
+  border-radius: 100%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  opacity: 0.5;
+}
+#mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+#photo {
+  clip-path: url(#mask-clip-path);
+}
+#glasses {
+  position: absolute;
+  z-index: 2;
+  width: 56%;
+  left: 20.5%;
+  bottom: 46.5%;
+  transition: all 0.4s ease-in-out;
+  pointer-events: none;
+}
+#face {
+  width: 100%;
+  display: block;
+  position: relative;
+  top: 0;
+}
+#portrait:hover #glasses {
+  transform: rotate(90deg) translate3d(50%, 150%, 0);
+  transform-origin: top left;
+}
+#contacts { list-style: none outside none; display: flex; padding: 0; margin-top: 0; white-space: nowrap; font-size: 0.9em; font-weight: 400; }
+#contacts li { margin-bottom: 0.25rem; margin-right: 1em; height: calc(1.1428rem + 4px); }
+#contacts li a { display: inline-flex; align-items: center; line-height: 1.1428rem; padding: 2px; border-radius: 2px; overflow: hidden; }
+#contacts li a .icon { fill: currentColor; height: 1.1428rem; width: 1.1428rem; margin-right: 3px; }
 #contacts li a.facebook { color: #3b5998; }
 #contacts li a.github { color: black; }
 #contacts li a.mail { color: black; }
@@ -74,13 +118,14 @@ p:last-child { margin-bottom: 0em; }
 #contacts li a.phone { color: black; }
 
 @media only screen and (max-width: 767px) {
-  #frame { opacity: 0; }
-  #name { text-align: center; }
-  #contacts { text-align: center; }
+  #frame { opacity: 0; left: 0; right: 0; top: 0; bottom: 0; }
+  #name, #contacts { text-align: center; }
+  #contacts li { margin-right: 0; }
 }
 @media only screen and (max-width: 1199px) {
+  #portrait-wrapper { padding: 0; }
   #name { margin-bottom: 1em; }
-  #contacts li { float: none; }
+  #contacts { flex-direction: column; }
 }
 
 details summary::-webkit-details-marker {
