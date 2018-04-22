@@ -5,20 +5,20 @@ html { font-size: 14px; }
 html, body { height: 100%; }
 body { font-weight: 300; font-family: 'Open Sans'; line-height: 1.4285em; color: rgba(0, 0, 0, 0.87); }
 strong { font-weight: 600; }
-h1, h2, h3, h4, h5 { line-height: 1.28571429em; margin: calc(2rem -  0.14285714em ) 0em 1rem; font-weight: bold; padding: 0em; }
+h1, h2, h3, h4, h5 { line-height: 1.28571429em; margin: calc(2rem -	0.14285714em ) 0em 1rem; font-weight: bold; padding: 0em; }
 h1:first-child,
 h2:first-child,
 h3:first-child,
 h4:first-child,
 h5:first-child {
-  margin-top: 0em;
+	margin-top: 0em;
 }
 h1:last-child,
 h2:last-child,
 h3:last-child,
 h4:last-child,
 h5:last-child {
-  margin-bottom: 0em;
+	margin-bottom: 0em;
 }
 h1, h2, h3 { text-transform: uppercase; }
 h1 { font-weight: 900; font-size: 1.5rem; font-family: 'Open Sans'; margin-bottom: 0; }
@@ -42,18 +42,18 @@ p:last-child { margin-bottom: 0em; }
 .ui.labels.fitted > .label { display: block; float: left; }
 
 @media only screen and (max-width: 767px) {
-  .ui.container { margin: 0 !important; }
-  #desktop { margin: 0; }
-  #a4 { padding: 0; }
+	.ui.container { margin: 0 !important; }
+	#desktop { margin: 0; }
+	#a4 { padding: 0; }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  #desktop { margin: calc((100% - 723px) / 2) 0; }
+	#desktop { margin: calc((100% - 723px) / 2) 0; }
 }		
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  #desktop { margin: calc((100% - 933px) / 2) 0; }
+	#desktop { margin: calc((100% - 933px) / 2) 0; }
 }		
 @media only screen and (min-width: 1200px) {
-  #desktop { margin: calc((100% - 1127px) / 2) 0; }
+	#desktop { margin: calc((100% - 1127px) / 2) 0; }
 }
 
 #a4 { border-radius: 0; border: none; box-shadow: 0 10px 100px 0 rgba(34,36,38,.1); transition: all 0.2s linear; }
@@ -67,45 +67,46 @@ p:last-child { margin-bottom: 0em; }
 #portrait-wrapper { display: inline-block; padding: 0 1em; }
 #portrait { position: relative; max-width: 15em; }
 #portrait:before {
-  display: block;
-  content: '';
-  padding-top: 100%;
-  border-radius: 100%;
-  position: absolute;
-  left: 0;
-  width: 100%;
-  bottom: 0;
-  opacity: 0.5;
+	display: block;
+	content: '';
+	padding-top: 100%;
+	border-radius: 100%;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	bottom: 0;
+	opacity: 0.5;
 }
 #mask {
-  position: absolute;
-  left: 0;
-  top: 0;
-  display: block;
-  height: 100%;
-  width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	height: 100%;
+	width: 100%;
 }
 #photo {
-  clip-path: url(#mask-clip-path);
+	-webkit-clip-path: url(#mask-clip-path);
+	clip-path: url(#mask-clip-path);
 }
 #glasses {
-  position: absolute;
-  z-index: 2;
-  width: 56%;
-  left: 20.5%;
-  bottom: 46.5%;
-  transition: all 0.4s ease-in-out;
-  pointer-events: none;
+	position: absolute;
+	z-index: 2;
+	width: 56%;
+	left: 20.5%;
+	bottom: 46.5%;
+	transition: all 0.4s ease-in-out;
+	pointer-events: none;
 }
 #face {
-  width: 100%;
-  display: block;
-  position: relative;
-  top: 0;
+	width: 100%;
+	display: block;
+	position: relative;
+	top: 0;
 }
 #portrait:hover #glasses {
-  transform: rotate(90deg) translate3d(50%, 150%, 0);
-  transform-origin: top left;
+	transform: rotate(90deg) translate3d(50%, 150%, 0);
+	transform-origin: top left;
 }
 #contacts { list-style: none outside none; display: flex; padding: 0; margin-top: 0; white-space: nowrap; font-size: 0.9em; font-weight: 400; }
 #contacts li { margin-bottom: 0.25rem; margin-right: 1em; height: calc(1.1428rem + 4px); }
@@ -118,19 +119,19 @@ p:last-child { margin-bottom: 0em; }
 #contacts li a.phone { color: black; }
 
 @media only screen and (max-width: 767px) {
-  #frame { opacity: 0; left: 0; right: 0; top: 0; bottom: 0; }
-  #name, #contacts { text-align: center; }
-  #contacts li { margin-right: 0; }
+	#frame { opacity: 0; left: 0; right: 0; top: 0; bottom: 0; }
+	#name, #contacts { text-align: center; }
+	#contacts li { margin-right: 0; }
 }
 @media only screen and (max-width: 1199px) {
-  #portrait-wrapper { padding: 0; }
-  #name { margin-bottom: 1em; }
-  #contacts { flex-direction: column; }
+	#portrait-wrapper { padding: 0; }
+	#name { margin-bottom: 1em; }
+	#contacts { flex-direction: column; }
 }
 
 details summary::-webkit-details-marker {
-  margin-left: 0.25em;
-  margin-right: 0.25em;
+	margin-left: 0.25em;
+	margin-right: 0.25em;
 }
 .packages > summary { cursor: pointer; }
 .packages > .labels { margin-top: 0.5em; }
