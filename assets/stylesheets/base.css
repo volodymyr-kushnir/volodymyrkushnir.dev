@@ -27,10 +27,9 @@ h2 + p { font-size: 1.5rem; }
 h3 { font-weight: 700; font-size: 1.25rem; font-family: 'Open Sans'; letter-spacing: 0.15em; }
 h4 { font-size: 1.125rem; }
 h5 { font-size: 1.0625rem; }
-a, a:hover { color: blue; text-decoration: none; }
-a[rel="external"]:not(.label) { position: relative; white-space: nowrap; -webkit-transition: color 0.2s; transition: color 0.2s; }
-a[rel="external"]:not(.label):before { position: absolute; top: auto; bottom: 0; left: 0; width: 100%; height: 1px; content: ''; background-color: blue; -webkit-transition: all 0.2s; transition: all 0.2s; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: scaleX(0); transform: scaleX(0); }
-a[rel="external"]:not(.label):hover:before { background-color: blue; -webkit-transform: scaleX(1); transform: scaleX(1); }
+a { color: blue; text-decoration: none; }
+a[rel="external"]:not(.label):hover, a.language:hover span { text-decoration: underline; }
+.language { font-weight: 600; white-space: nowrap; }
 p { margin: 0em 0em 1em; line-height: 1.4285em; }
 p:first-child { margin-top: 0em; }
 p:last-child { margin-bottom: 0em; }
@@ -102,8 +101,6 @@ details summary::-webkit-details-marker {
 .timeline > ul > li > p { margin: 0; }
 .tags { font-weight: 400; font-family: 'Open Sans'; }
 .tags p { font-size: 0.88em; }
-.language { color: inherit; white-space: nowrap; position: relative; }
-a.language { font-weight: 600; }
 
 .color { cursor: pointer; white-space: nowrap; background: inherit; font: inherit; border: none; margin: 0; padding: 0; }
 .color:before { content: ''; display: inline-block; border-radius: 100%; margin: 0.27em; height: 0.88em; width: 0.88em; vertical-align: top; position: relative; }
