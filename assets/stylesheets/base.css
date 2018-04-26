@@ -59,8 +59,8 @@ p:last-child { margin-bottom: 0em; }
 #a4:hover { box-shadow: 0 10px 100px 0 rgba(34,36,38,.3); }
 #a4.midnightblue #frame { border-color: midnightblue; }
 #a4.chartreuse #frame { border-color: chartreuse; }
-#a4.midnightblue #portrait:before { background-color: midnightblue; }
-#a4.chartreuse #portrait:before { background-color: chartreuse; }
+#a4.midnightblue #portrait circle { fill: midnightblue; }
+#a4.chartreuse #portrait circle { fill: chartreuse; }
 
 #frame { position: absolute; left: -1em; top: -1em; right: -1em; bottom: -1em; transition: border-color 0.2s ease-in-out; border-width: 1em; border-style: solid; }
 #portrait-wrapper { padding: 0 1em; }
