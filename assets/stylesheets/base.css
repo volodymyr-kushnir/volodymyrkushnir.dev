@@ -57,16 +57,9 @@ p:last-child { margin-bottom: 0em; }
 
 #a4 { border-radius: 0; border: none; box-shadow: 0 10px 100px 0 rgba(34,36,38,.1); transition: all 0.2s linear; }
 #a4:hover { box-shadow: 0 10px 100px 0 rgba(34,36,38,.3); }
-#a4.midnightblue #frame { border-color: midnightblue; }
-#a4.chartreuse #frame { border-color: chartreuse; }
-#a4.midnightblue #portrait circle { fill: midnightblue; }
-#a4.chartreuse #portrait circle { fill: chartreuse; }
-
-#frame { position: absolute; left: -1em; top: -1em; right: -1em; bottom: -1em; transition: border-color 0.2s ease-in-out; border-width: 1em; border-style: solid; }
-#portrait-wrapper { padding: 0 1em; }
-#portrait { position: relative; max-width: 15em; }
-#glasses { transition: all 0.4s ease-in-out; }
-#portrait:hover #glasses { transform: rotate(90deg) translate3d(50%, 150%, 0); transform-origin: top left; }
+#frame { position: absolute; left: -1em; top: -1em; right: -1em; bottom: -1em; border-color: midnightblue; transition: border-color 0.2s ease-in-out; border-width: 1em; border-style: solid; }
+#avatar-wrapper { padding: 0 1em; }
+#avatar { position: relative; max-width: 15em; }
 #contacts { list-style: none outside none; display: flex; padding: 0; margin-top: 0; white-space: nowrap; font-size: 0.9em; font-weight: 400; }
 #contacts li { margin-bottom: 0.25rem; margin-right: 1em; height: calc(1.1428rem + 4px); }
 #contacts li a { display: inline-flex; align-items: center; line-height: 1.1428rem; padding: 2px; border-radius: 2px; overflow: hidden; }
@@ -83,7 +76,7 @@ p:last-child { margin-bottom: 0em; }
 	#contacts li { margin-right: 0; }
 }
 @media only screen and (max-width: 1199px) {
-	#portrait-wrapper { padding: 0; }
+	#avatar-wrapper { padding: 0; }
 	#name { margin-bottom: 1em; }
 	#contacts { flex-direction: column; }
 }
