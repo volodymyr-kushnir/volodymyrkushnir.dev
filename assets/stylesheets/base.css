@@ -114,7 +114,7 @@ details summary::-webkit-details-marker {
 
 #childhood { display: none; position: relative; height: 100%; width: 100%; }
 #childhood > div { padding: 1em; height: 100%; width: 100%; overflow: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; }
-#childhood img { width: auto; height: 100%; display: inline-block; vertical-align: top; }
+#childhood img, #childhood object { width: auto; height: 100%; display: inline-block; vertical-align: top; }
 #childhood:target { display: block; }
 #childhood:target ~ .ui.container { display: none; }
 
