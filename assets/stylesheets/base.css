@@ -141,15 +141,16 @@ li.details > input { float: left; margin-left: -1.25em; margin-top: 0.33em; }
 #daily li:not(:last-child):after { content: '\25cf'; margin: 0 0.25rem; }
 #daily:after { content: ''; clear: both; display: block; }
 
-#grown-up { background: #c3c3c3; color: white; padding: 0em 0.2em; border-radius: 3px; display: block; height: 1em; line-height: 0.9em; transition: all 0.2s ease-in-out; float: left; margin: 0.3em 0.5em 0 0; overflow: hidden; }
-#grown-up:hover { background: #b5b5b5; }
-#grown-up:active { background: #a0a0a0; }
+#grown-up { color: inherit; transition: 0.2s; opacity: 0.75; padding: 0 0.25em 0.25em 0.25em; margin-left: -0.25em; display: inline-block; }
+#grown-up:hover { opacity: 1; }
+#grown-up .dots { background: #808080; color: white; padding: 0em 0.2em; border-radius: 3px; display: inline-block; height: 1em; line-height: 0.9em; }
 
 #childhood { display: none; position: relative; height: 100%; width: 100%; }
-#childhood > div { padding: 1em; height: 100%; width: 100%; overflow: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; }
-#childhood img, #childhood object { width: auto; height: 100%; display: inline-block; vertical-align: top; }
+#childhood .photos { height: 100%; width: 100%; overflow: auto; display: inline-flex; -webkit-overflow-scrolling: touch; }
+#childhood .photos img { display: block; width: auto; height: 100%; padding: 4px 0 4px 4px; }
+#childhood .photos img:last-child { padding-right: 4px; }
 #childhood:target { display: block; }
-#childhood:target ~ .ui.container { display: none; }
+#childhood:target ~ #desktop { display: none; }
 
 .close { text-indent: -9999px; position: absolute; z-index: 1; top: 2em; left: 2em; display: inline-block; width: 4em; height: 4em; overflow: hidden; }
 .close:before, .close:after { content: ''; position: absolute; width: 100%; top: 50%; left: 0; margin-top: -1px; background: white; height: 1px; }
