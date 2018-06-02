@@ -81,18 +81,51 @@ p:last-child { margin-bottom: 0em; }
 	#contacts { flex-direction: column; }
 }
 
-details summary::-webkit-details-marker {
+/* Native details element styling */
+details > summary::-webkit-details-marker { margin-left: 0.25em;	margin-right: 0.25em; }
+details > summary { cursor: pointer; }
+details > div { margin-top: 0.5em; }
+details > div:after { content: ''; clear: both; display: block; }
+/* Alternative to details compatible with Safari */
+.details > input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+	border-radius: 0;
+	background: none;
 	margin-left: 0.25em;
 	margin-right: 0.25em;
+	border-top: 0.375em solid transparent;
+	border-bottom: 0.375em solid transparent;
+	border-left: 0.5em solid black;
+	width: 0.5em;
+	height: 0.75em;
+	position: relative;
+	transition: 0.2s;
 }
-.packages > summary { cursor: pointer; }
-.packages > .labels { margin-top: 0.5em; }
-.packages > .labels:after { content: ''; clear: both; display: block; }
+.details > input:after {
+	content: ' ';
+	display: block;
+	position: absolute;
+	height: 1.25em;
+	width: 1.25em;
+	top: -0.625em;
+	left: -0.875em;
+}
+.details > input:checked { transform: rotate(90deg); }
+.details > label.summary { cursor: pointer; }
+.details > input:checked ~ div { display: block; }
+.details > div { display: none; margin-top: 0.5em; }
+.details > div:after { content: ''; clear: both; display: block; }
+/* Details as a list item */
+li.details { list-style-type: none; }
+li.details > input { float: left; margin-left: -1.25em; margin-top: 0.33em; }
+
 .timeline > ul { list-style: none outside none; padding: 0; }
 .timeline > ul > li > ul { list-style: disc outside none; padding-left: 1.5em; }
 .timeline > ul > li { margin-top: 1.125em; }
 .timeline > ul > li > p { margin: 0; }
-.tags { font-weight: 400; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
 .tags p { font-size: 0.88em; }
 
 .color { cursor: pointer; white-space: nowrap; background: inherit; font: inherit; border: none; margin: 0; padding: 0; }
