@@ -177,7 +177,7 @@ li.details > input { float: left; margin-left: -1.25em; margin-top: 0.33em; }
 	margin-right: 0.2857142857em;
 }
 #grown-up .dots .dot {
-	display: inline-block;
+	float: left;
 	height: 0.42857142857em;
 	width: 0.42857142857em;
 	background: white;
@@ -185,7 +185,7 @@ li.details > input { float: left; margin-left: -1.25em; margin-top: 0.33em; }
 	margin-top: 0.2857142857em;
 	vertical-align: top;
 }
-#grown-up .dots .dot:not:last-child {
+#grown-up .dots .dot:not(:last-child) {
 	margin-right: 0.2142857em;
 }
 
