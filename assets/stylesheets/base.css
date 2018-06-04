@@ -46,9 +46,34 @@ li:before {
 
 .ui.bulleted.list .list > .item:before, .ui.bulleted.list > .item:before, ul.ui.list li:before { content: '\25cf'; margin-left: -1rem; }
 .ui.horizontal.bulleted.list > .item, ul.ui.horizontal.bulleted.list li { margin-left: 1.5rem; }
-.ui.fitted.fat.divider { border-top: 0.25em solid rgba(10, 10, 10, 1); width: 33%; }
-.ui.labels > .label { font-weight: 600; }
-.ui.labels.fitted > .label { display: block; float: left; }
+
+/* Labels */
+.labels > .label {
+	background-color: #E8E8E8;
+	border-radius: 0.28571429rem;
+	color: rgba(0, 0, 0, 0.6);
+	cursor: pointer;
+	display: block;
+	float: left;
+	font-size: 0.78571429rem;
+	font-weight: 600;
+	line-height: 1;
+	margin-bottom: 0.5em;
+	padding: 0.5833em 0.833em;
+	transition: background 0.1s ease;
+	-webkit-transition: background 0.1s ease;
+}
+.labels > .label:hover {
+	background-color: #E0E0E0;
+	color: rgba(0, 0, 0, 0.8);
+}
+.labels > .label:not(:last-child) {
+	margin-right: 0.5em;
+}
+
+/* Divider */
+.divider { border-top: 1px solid rgba(222, 222, 222, 1); }
+.divider.fat { border-top: 0.3571428571428571em solid rgba(10, 10, 10, 1); width: 33%; }
 
 @media only screen and (max-width: 767px) {
 	.ui.container { margin: 0 !important; }
