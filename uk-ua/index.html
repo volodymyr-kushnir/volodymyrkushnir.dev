@@ -29,12 +29,8 @@
 	<link rel="me" href="skype:volodymyr_kushnir">
 	<link rel="me" href="tel:+380952600797">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/reset.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/header.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/container.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/segment.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/grid.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/divider.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/label.min.css">
 	<link rel="stylesheet" href="./assets/stylesheets/base.css">
 </head>
 <body>
@@ -57,8 +53,8 @@
 			<img src="./assets/photos/461737_173999722718248_1691527332_o.jpg" alt="Me with a cat">
 		</div>
 	</div>
-	<div id="desktop" class="ui container">
-		<div class="ui very padded segment" id="a4">
+	<div id="desktop">
+		<div class="ui basic very padded segment" id="a4">
 			<div class="ui basic padded segment stackable grid">
 				<div id="frame"></div>
 				<div class="ui row">
@@ -105,7 +101,7 @@
 								</ul>
 							</div>
 							<div class="ui sixteen wide mobile only column">
-								<div class="ui fitted divider"></div>
+								<div class="divider"></div>
 							</div>
 							<div class="ui sixteen wide column">
 								<h2>Резюме</h2>
@@ -116,7 +112,7 @@
 				</div>
 				<div class="ui row">
 					<div class="ui sixteen wide column">
-						<div class="ui fitted fat divider"></div>
+						<div class="fat divider"></div>
 					</div>
 				</div>
 				<div class="ui row">
@@ -131,56 +127,56 @@
 										<li class="details">
 											<input type="checkbox" id="project-2">
 											<label for="project-2" class="summary">full-stack розробник &mdash; програмую, тестую і розгортаю до Amazon Web Services додатки, написані на Node.js, React, GraphQL і PostgreSQL</label>
-											<div class="ui small labels fitted">
-												<a rel="external" class="ui label" href="https://github.com/apollographql/apollo-client">apollo-client</a>
-												<a rel="external" class="ui label" href="https://github.com/jaredpalmer/formik">formik</a>
-												<a rel="external" class="ui label" href="https://github.com/graphql/graphql-js">graphql</a>
-												<a rel="external" class="ui label" href="https://github.com/apollographql/graphql-tag">graphql-tag</a>
-												<a rel="external" class="ui label" href="https://github.com/ianstormtaylor/slate">slate</a>
-												<a rel="external" class="ui label" href="https://github.com/transloadit/uppy">uppy</a>
-												<a rel="external" class="ui label" href="https://github.com/jquense/yup">yup</a>
-												<a rel="external" class="ui label" href="https://github.com/storybooks/storybook">storybook</a>
-												<a rel="external" class="ui label" href="https://github.com/GoogleChrome/puppeteer">puppeteer</a>
-												<a rel="external" class="ui label" href="https://github.com/visionmedia/debug">debug</a>
-												<a rel="external" class="ui label" href="https://github.com/motdotla/dotenv">dotenv</a>
-												<a rel="external" class="ui label" href="https://github.com/expressjs/express">express</a>
-												<a rel="external" class="ui label" href="https://github.com/hapijs/joi">joi</a>
-												<a rel="external" class="ui label" href="https://github.com/expressjs/morgan">morgan</a>
-												<a rel="external" class="ui label" href="https://github.com/jaredhanson/passport">passport</a>
-												<a rel="external" class="ui label" href="https://github.com/brianc/node-postgres">pg</a>
-												<a rel="external" class="ui label" href="https://github.com/request/request">request</a>
-												<a rel="external" class="ui label" href="https://github.com/graphile/postgraphile">postgraphile</a>
-												<a rel="external" class="ui label" href="https://github.com/chaijs/chai">chai</a>
-												<a rel="external" class="ui label" href="https://github.com/mochajs/mocha">mocha</a>
-												<a rel="external" class="ui label" href="https://github.com/standard/standard">standard</a>
-												<a rel="external" class="ui label" href="https://github.com/standard/snazzy">snazzy</a>
+											<div class="labels">
+												<a rel="external" class="label" href="https://github.com/apollographql/apollo-client">apollo-client</a>
+												<a rel="external" class="label" href="https://github.com/jaredpalmer/formik">formik</a>
+												<a rel="external" class="label" href="https://github.com/graphql/graphql-js">graphql</a>
+												<a rel="external" class="label" href="https://github.com/apollographql/graphql-tag">graphql-tag</a>
+												<a rel="external" class="label" href="https://github.com/ianstormtaylor/slate">slate</a>
+												<a rel="external" class="label" href="https://github.com/transloadit/uppy">uppy</a>
+												<a rel="external" class="label" href="https://github.com/jquense/yup">yup</a>
+												<a rel="external" class="label" href="https://github.com/storybooks/storybook">storybook</a>
+												<a rel="external" class="label" href="https://github.com/GoogleChrome/puppeteer">puppeteer</a>
+												<a rel="external" class="label" href="https://github.com/visionmedia/debug">debug</a>
+												<a rel="external" class="label" href="https://github.com/motdotla/dotenv">dotenv</a>
+												<a rel="external" class="label" href="https://github.com/expressjs/express">express</a>
+												<a rel="external" class="label" href="https://github.com/hapijs/joi">joi</a>
+												<a rel="external" class="label" href="https://github.com/expressjs/morgan">morgan</a>
+												<a rel="external" class="label" href="https://github.com/jaredhanson/passport">passport</a>
+												<a rel="external" class="label" href="https://github.com/brianc/node-postgres">pg</a>
+												<a rel="external" class="label" href="https://github.com/request/request">request</a>
+												<a rel="external" class="label" href="https://github.com/graphile/postgraphile">postgraphile</a>
+												<a rel="external" class="label" href="https://github.com/chaijs/chai">chai</a>
+												<a rel="external" class="label" href="https://github.com/mochajs/mocha">mocha</a>
+												<a rel="external" class="label" href="https://github.com/standard/standard">standard</a>
+												<a rel="external" class="label" href="https://github.com/standard/snazzy">snazzy</a>
 											</div>
 										</li>
 										<li class="details">
 											<input type="checkbox" id="project-1">
 											<label for="project-1" class="summary">програмував, тестував і розгортав фронтенд на основі React/Redux</label>
-											<div class="ui small labels fitted">
-												<a rel="external" class="ui label" href="https://github.com/facebookincubator/create-react-app">create-react-app</a>
-												<a rel="external" class="ui label" href="https://github.com/mzabriskie/axios">axios</a>
-												<a rel="external" class="ui label" href="https://github.com/JedWatson/classnames">classnames</a>
-												<a rel="external" class="ui label" href="https://github.com/lodash/lodash">lodash</a>
-												<a rel="external" class="ui label" href="https://github.com/moment/moment">moment</a>
-												<a rel="external" class="ui label" href="https://github.com/paularmstrong/normalizr">normalizr</a>
-												<a rel="external" class="ui label" href="https://github.com/sindresorhus/query-string">query-string</a>
-												<a rel="external" class="ui label" href="https://github.com/facebook/react">react</a>
-												<a rel="external" class="ui label" href="https://github.com/yahoo/react-intl">react-intl</a>
-												<a rel="external" class="ui label" href="https://github.com/reactjs/react-redux">react-redux</a>
-												<a rel="external" class="ui label" href="https://github.com/ReactTraining/react-router">react-router</a>
-												<a rel="external" class="ui label" href="https://github.com/reactjs/redux">redux</a>
-												<a rel="external" class="ui label" href="https://github.com/erikras/redux-form">redux-form</a>
-												<a rel="external" class="ui label" href="https://github.com/evgenyrodionov/redux-logger">redux-logger</a>
-												<a rel="external" class="ui label" href="https://github.com/redux-saga/redux-saga">redux-saga</a>
-												<a rel="external" class="ui label" href="https://github.com/gaearon/redux-thunk">redux-thunk</a>
-												<a rel="external" class="ui label" href="https://github.com/Semantic-Org/Semantic-UI-React">semantic-ui-react</a>
-												<a rel="external" class="ui label" href="https://github.com/sass/node-sass">node-sass</a>
-												<a rel="external" class="ui label" href="https://github.com/prettier/prettier">prettier</a>
-												<a rel="external" class="ui label" href="https://github.com/Codeception/codeceptjs">codeceptjs</a>
-												<a rel="external" class="ui label" href="https://github.com/segmentio/nightmare">nightmare</a>
+											<div class="labels">
+												<a rel="external" class="label" href="https://github.com/facebookincubator/create-react-app">create-react-app</a>
+												<a rel="external" class="label" href="https://github.com/mzabriskie/axios">axios</a>
+												<a rel="external" class="label" href="https://github.com/JedWatson/classnames">classnames</a>
+												<a rel="external" class="label" href="https://github.com/lodash/lodash">lodash</a>
+												<a rel="external" class="label" href="https://github.com/moment/moment">moment</a>
+												<a rel="external" class="label" href="https://github.com/paularmstrong/normalizr">normalizr</a>
+												<a rel="external" class="label" href="https://github.com/sindresorhus/query-string">query-string</a>
+												<a rel="external" class="label" href="https://github.com/facebook/react">react</a>
+												<a rel="external" class="label" href="https://github.com/yahoo/react-intl">react-intl</a>
+												<a rel="external" class="label" href="https://github.com/reactjs/react-redux">react-redux</a>
+												<a rel="external" class="label" href="https://github.com/ReactTraining/react-router">react-router</a>
+												<a rel="external" class="label" href="https://github.com/reactjs/redux">redux</a>
+												<a rel="external" class="label" href="https://github.com/erikras/redux-form">redux-form</a>
+												<a rel="external" class="label" href="https://github.com/evgenyrodionov/redux-logger">redux-logger</a>
+												<a rel="external" class="label" href="https://github.com/redux-saga/redux-saga">redux-saga</a>
+												<a rel="external" class="label" href="https://github.com/gaearon/redux-thunk">redux-thunk</a>
+												<a rel="external" class="label" href="https://github.com/Semantic-Org/Semantic-UI-React">semantic-ui-react</a>
+												<a rel="external" class="label" href="https://github.com/sass/node-sass">node-sass</a>
+												<a rel="external" class="label" href="https://github.com/prettier/prettier">prettier</a>
+												<a rel="external" class="label" href="https://github.com/Codeception/codeceptjs">codeceptjs</a>
+												<a rel="external" class="label" href="https://github.com/segmentio/nightmare">nightmare</a>
 											</div>
 										</li>
 										<li>роблю ще інші речі час від часу</li>
