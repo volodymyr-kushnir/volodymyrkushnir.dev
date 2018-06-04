@@ -1,3 +1,33 @@
+#desktop {
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	#desktop {
+		width: 723px;
+		margin-top: calc((100% - 723px) / 2);
+		margin-bottom: calc((100% - 723px) / 2);
+	}
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	#desktop {
+		width: 933px;
+		margin-top: calc((100% - 933px) / 2);
+		margin-bottom: calc((100% - 933px) / 2);
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	#desktop {
+		width: 1127px;
+		margin-top: calc((100% - 1127px) / 2);
+		margin-bottom: calc((100% - 1127px) / 2);
+	}
+}
+
 ::selection { background: yellow; }
 ::-moz-selection { background: yellow; }
 
@@ -76,18 +106,7 @@ li:before {
 .divider.fat { border-top: 0.3571428571428571em solid rgba(10, 10, 10, 1); width: 33%; }
 
 @media only screen and (max-width: 767px) {
-	.ui.container { margin: 0 !important; }
-	#desktop { margin: 0; }
 	#a4 { padding: 0; }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-	#desktop { margin: calc((100% - 723px) / 2) 0; }
-}		
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-	#desktop { margin: calc((100% - 933px) / 2) 0; }
-}		
-@media only screen and (min-width: 1200px) {
-	#desktop { margin: calc((100% - 1127px) / 2) 0; }
 }
 
 #a4 { border-radius: 0; border: none; box-shadow: 0 10px 100px 0 rgba(34,36,38,.1); transition: all 0.2s linear; }
