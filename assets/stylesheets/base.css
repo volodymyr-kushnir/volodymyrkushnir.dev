@@ -12,6 +12,7 @@
 html {
   font-size: 14px;
   -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   box-sizing: border-box;
 }
 html,
@@ -50,15 +51,11 @@ h3 {
 h1 {
   font-weight: 900;
   font-size: 1.5rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin-bottom: 0;
 }
 h2 {
   font-weight: 900;
   font-size: 3rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   letter-spacing: 0.25em;
 }
 h2 + p {
@@ -68,8 +65,6 @@ h2 + p {
 h3 {
   font-weight: 700;
   font-size: 1.25rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   letter-spacing: 0.15em;
 }
 h4 {
@@ -160,6 +155,7 @@ button {
 button,
 [type="button"] {
   -webkit-appearance: button;
+  appearance: button;
 }
 
 /* Remove the inner border and padding in Firefox	*/
@@ -407,8 +403,6 @@ button:-moz-focusring,
 .grid > [class*="center aligned"].column.column,
 .grid > .row > [class*="center aligned"].column.column {
   text-align: center;
-  -ms-grid-row-align: inherit;
-  align-self: inherit;
 }
 
 /* Stackable */
@@ -586,7 +580,7 @@ details > div {
   margin-top: 0.5em;
 }
 details > div:after {
-  content: "";
+  content: " ";
   clear: both;
   display: block;
 }
@@ -632,7 +626,7 @@ details > div:after {
   margin-top: 0.5em;
 }
 .details > div:after {
-  content: "";
+  content: " ";
   clear: both;
   display: block;
 }
@@ -685,7 +679,7 @@ li.details > input {
   padding: 0;
 }
 .color:before {
-  content: "";
+  content: " ";
   display: inline-block;
   border-radius: 100%;
   margin: 0.27em;
@@ -738,7 +732,7 @@ li.details > input {
   margin: 0.5em 0.42857142857em 0 0.42857142857em;
 }
 #daily:after {
-  content: "";
+  content: " ";
   clear: both;
   display: block;
 }
@@ -823,7 +817,7 @@ li.details > input {
 }
 .close:before,
 .close:after {
-  content: "";
+  content: " ";
   position: absolute;
   width: 100%;
   top: 50%;
