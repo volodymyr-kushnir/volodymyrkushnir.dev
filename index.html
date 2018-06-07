@@ -351,52 +351,24 @@
 		document.getElementById("meh").addEventListener("click", function() {
 			this.childNodes[2].play();
 		});
-
- 		/*
-		 * Replace image sources with the smallest data URI image possible for a transparent image
-		 * http://stackoverflow.com/questions/6018611/smallest-data-uri-image-possible-for-a-transparent-image
-		 */
-		var tempSrc = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
 		function replaceNoscript(noscript) {
 			var parent = noscript.parentElement;
 			Array.prototype.slice.call((new DOMParser()).parseFromString(noscript.textContent, "text/html").body.children).forEach(function(element) {
-				if (element.tagName === "IMG") {
-					var img = element;
-					var src = img.getAttribute("src");
-					src && img.setAttribute("data-src", src);
-					img.src = tempSrc;
-					var srcset = img.getAttribute("srcset");
-					srcset && img.setAttribute("data-srcset", srcset);
-					img.removeAttribute("srcset");
-					parent.insertBefore(img, noscript);
-				} else {
-					parent.insertBefore(element, noscript);
-				}
+				parent.insertBefore(element, noscript);
 			});
 			parent.removeChild(noscript);
-		}
-		function swapSources(img) {
-			var dataSrc = img.getAttribute("data-src");
-			dataSrc && img.setAttribute("src", dataSrc);
-			img.removeAttribute("data-src");
-			var dataSrcset = img.getAttribute("data-srcset");
-			dataSrcset && img.setAttribute("srcset", dataSrcset);
-			img.removeAttribute("data-srcset");
 		}
 		function callFuncOnCollection(collection, func) {
 			Array.prototype.slice.call(collection).map(function (item) {
 				func(item)
 			});
 		}
-
-		/* Lazy load childhood photos */
 		var childhoodPhotos = document.getElementById("childhood").getElementsByClassName("photos")[0];
-		callFuncOnCollection(childhoodPhotos.getElementsByTagName("NOSCRIPT"), replaceNoscript);
 		document.getElementById("grown-up").addEventListener("click", function() {
-			callFuncOnCollection(childhoodPhotos.getElementsByTagName("IMG"), swapSources);
+			callFuncOnCollection(childhoodPhotos.getElementsByTagName("NOSCRIPT"), replaceNoscript);
 		});
 		if (window.location.hash === "#childhood") {
-			callFuncOnCollection(childhoodPhotos.getElementsByTagName("IMG"), swapSources);
+			callFuncOnCollection(childhoodPhotos.getElementsByTagName("NOSCRIPT"), replaceNoscript);
 		}
 	</script>
 </body>
