@@ -206,6 +206,7 @@ button:-moz-focusring,
   transition: border-color 0.2s ease-in-out;
   border-width: 1em;
   border-style: solid;
+  pointer-events: none;
 }
 
 @media only screen and (max-width: 767px) {
@@ -648,6 +649,7 @@ li.details > input {
 .timeline > ul {
   list-style: none outside none;
   padding: 0;
+  margin: 0;
 }
 .timeline > ul > li:before {
   display: none;
