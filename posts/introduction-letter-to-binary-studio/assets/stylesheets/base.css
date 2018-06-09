@@ -1,8 +1,8 @@
 ::-moz-selection {
-  background: yellow;
+  background: skyblue;
 }
 ::selection {
-  background: yellow;
+  background: skyblue;
 }
 *,
 *:before,
@@ -206,6 +206,7 @@ button:-moz-focusring,
   transition: border-color 0.2s ease-in-out;
   border-width: 1em;
   border-style: solid;
+  pointer-events: none;
 }
 
 @media only screen and (max-width: 767px) {
