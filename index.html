@@ -375,6 +375,11 @@
 		if (window.location.hash === "#childhood") {
 			callFuncOnCollection(childhoodPhotos.getElementsByTagName("NOSCRIPT"), replaceNoscript);
 		}
+		if ("serviceWorker" in navigator) {
+		  window.addEventListener("load", function() {
+    		navigator.serviceWorker.register('/sw.js');
+  		});
+		}
 	</script>
 </body>
 </html>
