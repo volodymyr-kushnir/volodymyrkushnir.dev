@@ -206,6 +206,7 @@ button:-moz-focusring,
   transition: border-color 0.2s ease-in-out;
   border-width: 1em;
   border-style: solid;
+  pointer-events: none;
 }
 
 @media only screen and (max-width: 767px) {
@@ -513,6 +514,8 @@ button:-moz-focusring,
   padding: 2px;
   border-radius: 2px;
   overflow: hidden;
+  color: black;
+  transition: color 0.2s ease-in-out;
 }
 #contacts li a .icon {
   fill: currentColor;
@@ -520,20 +523,20 @@ button:-moz-focusring,
   width: 1.1428rem;
   margin-right: 3px;
 }
-#contacts li a.facebook {
+#contacts li a.facebook:hover {
   color: #3b5998;
 }
-#contacts li a.github {
-  color: black;
+#contacts li a.github:hover {
+  color: dimgrey;
 }
-#contacts li a.mail {
-  color: black;
+#contacts li a.mail:hover {
+  color: dimgrey;
 }
-#contacts li a.skype {
+#contacts li a.skype:hover {
   color: #00aff0;
 }
-#contacts li a.phone {
-  color: black;
+#contacts li a.phone:hover {
+  color: dimgrey;
 }
 
 @media only screen and (max-width: 767px) {
@@ -648,6 +651,7 @@ li.details > input {
 .timeline > ul {
   list-style: none outside none;
   padding: 0;
+  margin: 0;
 }
 .timeline > ul > li:before {
   display: none;

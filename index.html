@@ -12,6 +12,7 @@
 	<meta name="subject" content="This is just a résumé.">
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="white">
 	<meta property="og:description" content="&mdash; Hello! I’m skilled frontend developer with 7 years of experience in UI/UX design, application development, and database modeling. I strive to craft precise, responsive, fast, easy-to-use environments with both strong purpose and great looks.">
 	<meta property="og:image:alt" content="Screenshot of the homepage">
 	<meta property="og:image:height" content="768">
@@ -24,7 +25,11 @@
 	<meta property="og:url" content="https://volodymyrkushnir.com/">
 	<base href="https://volodymyrkushnir.com/">
 	<title>Volodymyr Kushnir &mdash; Résumé</title>
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" type="image/x-icon" href="./favicon.ico">
+	<link rel="icon" type="image/png" sizes="192x192" href="./assets/images/favicon-192x192.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="./assets/images/favicon-512x512.png">
+	<link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png">
+	<link rel="manifest" href="./manifest.json">
 	<link rel="me" href="https://www.fb.com/volodyakushnir" type="text/html">
 	<link rel="me" href="mailto:volodymyr.kushnir@me.com">
 	<link rel="me" href="skype:volodymyr_kushnir">
@@ -60,7 +65,7 @@
 				<div class="row">
 					<div class="three wide center aligned column">
 						<div id="avatar-wrapper">
-							<object id="avatar" data="./assets/images/avatar.svg"></object>
+							<object id="avatar" data="./assets/images/avatar.svg" role="img" aria-label="My profile picture"></object>
 						</div>
 					</div>
 					<div class="thirteen wide column">
@@ -369,6 +374,11 @@
 		});
 		if (window.location.hash === "#childhood") {
 			callFuncOnCollection(childhoodPhotos.getElementsByTagName("NOSCRIPT"), replaceNoscript);
+		}
+		if ("serviceWorker" in navigator) {
+		  window.addEventListener("load", function() {
+    		navigator.serviceWorker.register('/sw.js');
+  		});
 		}
 	</script>
 </body>
