@@ -3,21 +3,23 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<!-- <base href="https://volodymyrkushnir.com/posts/introduction-letter-to-binary-studio/"> -->
 	<title>Introduction Letter to Binary Studio</title>
 	<link rel="stylesheet" href="./assets/stylesheets/base.css">
-	<style>
-		#content {
-			padding: 1em;
-		}
-	</style>
 </head>
 <body>
 	<div id="desktop">
-		<div id="a4">
+		<div id="page-1" class="page">
 			<div id="frame"></div>
 			<div id="content">
-				<h1>— Hey, hello, hola!</h1>
-				<h2>I’m a new frontend developer at <a href="https://binary-studio.com/" rel="external"><strong>Binary Studio</strong></a> and this here is my introduction letter. So let me introduce myself — my name is <strong>Volodymyr Kushnir</strong> and I’m new <em>(3 days old at the moment of this writing)</em>.</h2>
+				<div id="avatar-wrapper">
+					<object id="avatar" data="../../assets/images/avatar-2012.svg" role="img" aria-label="My profile picture"></object>
+				</div>
+				<h1>
+					<span style="font-weight: 700;">— Hey,</span> <strong>hello,</strong> <span style="font-weight: 400;">hola!</span>
+					<br />
+					I’m a new frontend developer at <a href="https://binary-studio.com/" rel="external"><strong>Binary Studio</strong></a> and this here is my introduction letter. So let me introduce myself — my name is <strong>Volodymyr Kushnir</strong> and I’m new <em>(3 days old at the moment of this writing)</em>.
+				</h1>
 				<div class="fat divider"></div>
 				<h3>LONG STORY LONG</h3>
 				<p><strong>First steps & 1990s</strong></p>
@@ -38,6 +40,12 @@
 				<p>To me, the most important things are competence, constant improvement, and passion. That is an environment I would like to work and live in. I mean the feeling that you have while you walk to the office early in the morning — kind of "do cool stuff with a bunch of nice guys and gals today", instead of just boring "work today". That’s priceless. I've been looking for that feeling for quite a long time, and it seems like I just may have finally found it.</p>
 			</div>
 		</div>
+		<div id="page-2" class="page photo">
+			<img src="./assets/photos/1244180_457131501071734_1731017764_o.jpg" alt="Kushnir wearing orange t-shirt" />
+		</div>
 	</div>
+	<script>
+		document.getElementById("avatar").contentDocument.getElementById("circle").setAttribute("fill", "black");
+	</script>
 </body>
 </html>
