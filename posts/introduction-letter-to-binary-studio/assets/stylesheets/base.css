@@ -252,6 +252,11 @@ button:-moz-focusring,
 #content {
   padding: 3em;
 }
+@media only screen and (max-width: 767px) {
+  #content {
+    padding: 1em;
+  }
+}
 
 /* Avatar */
 #avatar-wrapper {
@@ -263,6 +268,14 @@ button:-moz-focusring,
 #avatar {
   position: relative;
   max-width: 15rem;
+}
+@media only screen and (max-width: 767px) {
+  #avatar-wrapper {
+    float: none;
+    margin: 2em auto 3em;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* Divider */

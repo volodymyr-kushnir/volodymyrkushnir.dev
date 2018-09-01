@@ -153,7 +153,7 @@ self.__precacheManifest = [
   },
   {
     "url": "posts/introduction-letter-to-binary-studio/assets/stylesheets/base.css",
-    "revision": "44eb94af75ae967239aac8f0e42be2bd"
+    "revision": "b56f613078f124bea066010c600a5f40"
   },
   {
     "url": "posts/introduction-letter-to-binary-studio/index.html",
