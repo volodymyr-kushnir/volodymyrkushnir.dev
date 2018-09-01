@@ -62,6 +62,13 @@
 		<div id="page-2" class="page photo">
 			<img src="./assets/photos/1244180_457131501071734_1731017764_o.jpg" alt="Kushnir wearing orange t-shirt" />
 		</div>
+		<script>
+			if ("serviceWorker" in navigator) {
+				window.addEventListener("load", function() {
+					navigator.serviceWorker.register('/sw.js');
+				});
+			}
+		</script>
 	</div>
 </body>
 </html>
