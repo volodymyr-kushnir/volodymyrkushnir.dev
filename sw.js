@@ -157,7 +157,7 @@ self.__precacheManifest = [
   },
   {
     "url": "posts/introduction-letter-to-binary-studio/index.html",
-    "revision": "cd012d20edbc79d7b73a811c35bdaf39"
+    "revision": "7e04d2685abd639fb009c2b3b91acdfe"
   },
   {
     "url": "ru-ru/index.html",
