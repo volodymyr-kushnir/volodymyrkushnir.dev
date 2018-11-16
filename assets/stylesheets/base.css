@@ -212,8 +212,10 @@ button:-moz-focusring,
   box-shadow: 0 10px 100px 0 rgba(34, 36, 38, 0.1);
   transition: all 0.2s linear;
 }
-.page:hover {
-  box-shadow: 0 10px 100px 0 rgba(34, 36, 38, 0.3);
+@media only screen {
+  .page:hover {
+    box-shadow: 0 10px 100px 0 rgba(34, 36, 38, 0.3);
+  }
 }
 @media only screen and (max-width: 767px) {
   .page {
@@ -251,6 +253,11 @@ button:-moz-focusring,
   flex-wrap: wrap;
   align-items: stretch;
   padding: 0;
+  /**
+   * Temporary hack to be sure avatar
+   * is rendered on print preview
+   */
+  display: block !important;
 }
 .grid .grid {
   margin-left: -1em;
@@ -492,6 +499,7 @@ button:-moz-focusring,
 #avatar {
   position: relative;
   max-width: 15rem;
+  display: block;
 }
 @media only screen and (max-width: 1199px) {
   #avatar-wrapper {
@@ -503,8 +511,10 @@ button:-moz-focusring,
 #contacts {
   list-style: none outside none;
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin-top: 0;
+  margin-bottom: 0;
   white-space: nowrap;
   font-size: 0.9em;
   font-weight: 400;
@@ -512,26 +522,13 @@ button:-moz-focusring,
 #contacts li {
   margin-bottom: 0.25rem;
   margin-right: 1em;
-  height: calc(1.1428rem + 4px);
 }
 #contacts li:before {
   display: none;
 }
 #contacts li a {
-  display: inline-flex;
-  align-items: center;
-  line-height: 1.1428rem;
-  padding: 2px;
-  border-radius: 2px;
-  overflow: hidden;
   color: black;
   transition: color 0.2s ease-in-out;
-}
-#contacts li a .icon {
-  fill: currentColor;
-  height: 1.1428rem;
-  width: 1.1428rem;
-  margin-right: 3px;
 }
 #contacts li a.facebook:hover {
   color: #3b5998;
@@ -547,6 +544,14 @@ button:-moz-focusring,
 }
 #contacts li a.phone:hover {
   color: dimgrey;
+}
+#contacts li a.website {
+  display: none;
+}
+#contacts li a .icon {
+  fill: currentColor;
+  height: 1.1428rem;
+  vertical-align: text-bottom;
 }
 
 @media only screen and (max-width: 767px) {
@@ -835,4 +840,27 @@ li.details > input {
 }
 .close:after {
   transform: rotate(-45deg);
+}
+
+/* Print */
+@media print {
+  .page {
+    padding: 0;
+    box-shadow: none;
+  }
+  #frame {
+    display: none;
+  }
+  .grid {
+    display: block;
+  }
+  #contacts {
+    margin-top: 1em;
+  }
+  #contacts li a.website {
+    display: block;
+  }
+  #avatar-wrapper {
+    padding: 0;
+  }
 }
