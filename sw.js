@@ -100,6 +100,10 @@ self.__precacheManifest = [
     "revision": "5e1f873f1420195e58be4cc61f963845"
   },
   {
+    "url": "assets/photos/42189774_10155495472086262_2455691218420498432_n.jpg",
+    "revision": "334b9c683753e841f693f608c1613ca3"
+  },
+  {
     "url": "assets/photos/461737_173999722718248_1691527332_o.jpg",
     "revision": "10c3d6ec0f27df301a9493c979e1db0f"
   },
@@ -133,7 +137,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/stylesheets/base.css",
-    "revision": "7f1858b9450da728c8cd9330f956618c"
+    "revision": "2e38df7c3c6ec35c826117a970f2a6f7"
   },
   {
     "url": "favicon.ico",
@@ -141,7 +145,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "144c1dd20f879cae545626abb4714940"
+    "revision": "c2bd87c7b9cef4c91e7e3adf7130ca36"
   },
   {
     "url": "posts/index.html",
@@ -161,11 +165,11 @@ self.__precacheManifest = [
   },
   {
     "url": "ru-ru/index.html",
-    "revision": "4225bce03c41e2e67194d48771c2c8e2"
+    "revision": "c069acc4eb1d88f1b3f849f055e0803c"
   },
   {
     "url": "uk-ua/index.html",
-    "revision": "2983743e820d87765ffe7f2b4bb347d5"
+    "revision": "397dfbd4013a35fef4783cafa295b10f"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
