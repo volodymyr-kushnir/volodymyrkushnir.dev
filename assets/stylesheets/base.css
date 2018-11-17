@@ -210,7 +210,6 @@ button:-moz-focusring,
   position: relative;
   padding: 4.5em;
   box-shadow: 0 10px 100px 0 rgba(34, 36, 38, 0.1);
-  transition: all 0.2s linear;
 }
 @media only screen {
   .page:hover {
@@ -495,11 +494,15 @@ button:-moz-focusring,
 /* Avatar */
 #avatar-wrapper {
   padding: 0 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #avatar {
   position: relative;
   max-width: 15rem;
   display: block;
+  flex: 1 0 auto;
 }
 @media only screen and (max-width: 1199px) {
   #avatar-wrapper {
