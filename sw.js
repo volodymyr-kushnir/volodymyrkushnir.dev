@@ -11,7 +11,7 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
@@ -25,11 +25,11 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/images/avatar-2012.svg",
-    "revision": "875d5e9fa16d17b2faa4784891cf39f4"
+    "revision": "1aab0b170c4022b1a8c6b7d08be469d9"
   },
   {
     "url": "assets/images/avatar.svg",
-    "revision": "e3715d9b7856999eac310ab8a5de10b1"
+    "revision": "435264b2a9656d605e7610233e52ac05"
   },
   {
     "url": "assets/images/favicon-192x192.png",
@@ -137,7 +137,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/stylesheets/base.css",
-    "revision": "4236e16a5be00ccd7d9550231119bfc8"
+    "revision": "8a2d4774a95e95b0426d3f1fcc69cafa"
   },
   {
     "url": "favicon.ico",
@@ -145,11 +145,11 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "c2bd87c7b9cef4c91e7e3adf7130ca36"
+    "revision": "40b3cbb84d1ad7697149ec52f8bd7238"
   },
   {
     "url": "posts/index.html",
-    "revision": "08196cbea8cc9d6b60e23070d5ca5adc"
+    "revision": "39ce28f66161aa3812f5b8199494b593"
   },
   {
     "url": "posts/introduction-letter-to-binary-studio/assets/photos/1244180_457131501071734_1731017764_o.jpg",
@@ -157,19 +157,19 @@ self.__precacheManifest = [
   },
   {
     "url": "posts/introduction-letter-to-binary-studio/assets/stylesheets/base.css",
-    "revision": "b56f613078f124bea066010c600a5f40"
+    "revision": "538e0851113e96ac46b216790fdc38bf"
   },
   {
     "url": "posts/introduction-letter-to-binary-studio/index.html",
-    "revision": "7e04d2685abd639fb009c2b3b91acdfe"
+    "revision": "7cbe1023f58be638cf1cb1267350417f"
   },
   {
     "url": "ru-ru/index.html",
-    "revision": "c069acc4eb1d88f1b3f849f055e0803c"
+    "revision": "5a85e7033e652562fed5a570a1715b00"
   },
   {
     "url": "uk-ua/index.html",
-    "revision": "397dfbd4013a35fef4783cafa295b10f"
+    "revision": "c9c8efd9acfa2f6f015192174a9b9c9d"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
