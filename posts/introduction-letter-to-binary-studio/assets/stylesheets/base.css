@@ -202,7 +202,7 @@ button:-moz-focusring,
   position: relative;
   padding: 4.5em;
   box-shadow: 0 10px 100px 0 rgba(34, 36, 38, 0.1);
-  transition: all 0.2s linear;
+  transition: box-shadow 0.2s linear;
   margin-bottom: 1em;
 }
 .page:last-child {
