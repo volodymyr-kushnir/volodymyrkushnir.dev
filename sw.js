@@ -137,7 +137,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/stylesheets/base.css",
-    "revision": "2324737ba563c4f015d64996a9dc74f8"
+    "revision": "536abf23db684b8a9e4fd89b8f554b9d"
   },
   {
     "url": "favicon.ico",
@@ -145,7 +145,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "d7d240eb9ba0a6ceb91f0bc73dd36d8a"
+    "revision": "0da76a4d2c88ca2cc9fee99a0e78050e"
   },
   {
     "url": "posts/index.html",
@@ -157,7 +157,7 @@ self.__precacheManifest = [
   },
   {
     "url": "posts/introduction-letter-to-binary-studio/assets/stylesheets/base.css",
-    "revision": "538e0851113e96ac46b216790fdc38bf"
+    "revision": "aab2e0c55e684fed2df5f63d93a30537"
   },
   {
     "url": "posts/introduction-letter-to-binary-studio/index.html",

@@ -217,6 +217,7 @@ button:-moz-focusring,
   position: relative;
   padding: 4.5em;
   box-shadow: 0 10px 100px 0 rgba(34, 36, 38, 0.1);
+  transition: box-shadow 0.2s linear;
 }
 @media only screen {
   .page:hover {
