@@ -72,7 +72,13 @@ h4 {
   font-size: 1.125rem;
 }
 h5 {
-  font-size: 1.0625rem;
+  font-size: 1rem;
+}
+h6 {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0 0 1em 0;
 }
 p {
   margin: 0 0 1em;
@@ -635,6 +641,8 @@ details > div:after {
 }
 .details > div {
   display: none;
+}
+.details > div.labels {
   margin-top: 0.5em;
 }
 .details > div:after {
@@ -662,18 +670,49 @@ li.details > input {
   padding: 0;
   margin: 0;
 }
+.timeline:not(:last-child) {
+  margin-bottom: 1rem;
+}
 .timeline > li:before {
   display: none;
 }
-.timeline > li > ul {
+.timeline > li:not(:last-child) {
+  margin-bottom: 1.125em;
+}
+.timeline > li p {
+  margin: 0;
+}
+.timeline > li ul {
   list-style: disc outside none;
   padding-left: 1.5em;
 }
-.timeline > li {
-  margin-top: 1.125em;
+.timeline > li ol {
+  list-style: disc outside none;
+  padding-left: 1.5em;
+  counter-reset: ol-counter;
 }
-.timeline > li > p {
-  margin: 0;
+.timeline > li ol > li:before {
+  content: counter(ol-counter);
+	counter-increment: ol-counter;
+  float: left;
+  height: 1.25em;
+  width: 1.25em;
+  background: black;
+  border-radius: 2px;
+  margin: 0.25rem 0 0 -1.25rem;
+  line-height: 1em;
+  font-size: 0.7em;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Highlighted timeline */
+.timeline.highlighted {
+  padding: 0.5em;
+  background: #f5f5f5;
+  border-radius: 4px;
 }
 
 /* Tags */
