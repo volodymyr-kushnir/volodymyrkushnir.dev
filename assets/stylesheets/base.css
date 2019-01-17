@@ -726,6 +726,7 @@ li.details > input {
   cursor: pointer;
   white-space: nowrap;
   background: inherit;
+  color: inherit;
   font: inherit;
   border: none;
   margin: 0;
