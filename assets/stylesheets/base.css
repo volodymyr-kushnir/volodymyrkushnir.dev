@@ -613,7 +613,7 @@ button:-moz-focusring,
   }
 }
 
-/* Native details element styling */
+/* Native <details> element styling */
 details {
   display: block;
 }
@@ -634,7 +634,7 @@ details > div:after {
   display: block;
 }
 
-/* Alternative to details compatible with Safari */
+/* Alternative to <details> compatible with Safari */
 .details > input {
   -webkit-appearance: none;
   -moz-appearance: none;
