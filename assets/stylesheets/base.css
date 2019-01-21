@@ -96,17 +96,47 @@ strong {
 small {
   font-size: 80%;
 }
+ul, ol {
+  list-style: none outside none;
+  padding-left: 1.5em;
+}
+ol {
+  counter-reset: ol-counter;
+}
 li {
   list-style: none outside none;
 }
-li:before {
-  content: " ";
+ul > li:before {
+  content: "●";
+  font-family: "Arial";
   float: left;
-  height: 0.42857142857em;
-  width: 0.42857142857em;
+  width: 1.5em;
+  margin-left: -1.5em;
+  text-align: center;
+}
+ol > li:before {
+  content: counter(ol-counter);
+  counter-increment: ol-counter;
+  float: left;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 2px;
+  background: transparent;
+  color: inherit;
+  font-weight: bold;
+  font-size: 0.8em;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: calc(-1.5rem + 0.4285rem / 2);
+  margin-top: calc(0.4285rem / 2);
+}
+ol.inverted > li:before {
   background: black;
-  border-radius: 100%;
-  margin: 0.5em 0 0 -1.25em;
+  color: white;
+  font-weight: normal;
+  font-size: 0.7em;
 }
 a {
   color: blue;
@@ -612,30 +642,23 @@ details > div:after {
   border: none;
   border-radius: 0;
   background: none;
-  margin-left: 0.25em;
-  margin-right: 0.25em;
-  border-top: 0.375em solid transparent;
-  border-bottom: 0.375em solid transparent;
-  border-left: 0.5em solid black;
-  width: 0.5em;
-  height: 0.75em;
-  position: relative;
   transition: 0.2s;
 }
 .details > input:after {
   content: " ";
-  display: block;
-  position: absolute;
-  height: 1.25em;
-  width: 1.25em;
-  top: -0.625em;
-  left: -0.875em;
+  border-top: 0.35em solid transparent;
+  border-bottom: 0.35em solid transparent;
+  border-left: 0.5em solid black;
+  position: relative;
+  width: 0.5em;
+  height: 0.7em;
 }
 .details > input:checked {
   transform: rotate(90deg);
 }
 .details > label.summary {
   cursor: pointer;
+  display: inline-block;
 }
 .details > input:checked ~ div {
   display: block;
@@ -661,8 +684,13 @@ li.details:before {
 }
 li.details > input {
   float: left;
-  margin-left: -1.25em;
-  margin-top: 0.33em;
+  margin-left: -1.5em;
+  width: 1.5em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  height: 1.4285em;
 }
 
 /* Timeline */
@@ -682,31 +710,6 @@ li.details > input {
 }
 .timeline > li p {
   margin: 0;
-}
-.timeline > li ul {
-  list-style: disc outside none;
-  padding-left: 1.5em;
-}
-.timeline > li ol {
-  list-style: disc outside none;
-  padding-left: 1.5em;
-  counter-reset: ol-counter;
-}
-.timeline > li ol > li:before {
-  content: counter(ol-counter);
-	counter-increment: ol-counter;
-  float: left;
-  height: 1.25em;
-  width: 1.25em;
-  background: black;
-  border-radius: 2px;
-  margin: 0.25rem 0 0 -1.25rem;
-  line-height: 1em;
-  font-size: 0.7em;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* Highlighted timeline */
