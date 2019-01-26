@@ -137,7 +137,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/stylesheets/base.css",
-    "revision": "87de4065979daa1380a47216ddbc9497"
+    "revision": "0fd80dbd8c4c8f2105fa328fd984555e"
   },
   {
     "url": "favicon.ico",

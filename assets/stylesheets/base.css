@@ -306,6 +306,9 @@ button:-moz-focusring,
   margin-left: -1em;
   margin-right: -1em;
 }
+.page .grid:first-child {
+  margin: -1.5em;
+}
 
 /* Rows */
 .grid > .row {
