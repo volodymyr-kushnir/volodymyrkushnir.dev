@@ -137,7 +137,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/stylesheets/base.css",
-    "revision": "2936adc10db9b28eaf6de88f8c963360"
+    "revision": "87de4065979daa1380a47216ddbc9497"
   },
   {
     "url": "favicon.ico",
@@ -145,7 +145,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "8a73d2ada3dca1833b279459e4ba6031"
+    "revision": "ebefa38e8ca21dc09dfdcee4293dc37a"
   },
   {
     "url": "posts/index.html",
@@ -165,11 +165,11 @@ self.__precacheManifest = [
   },
   {
     "url": "ru-ru/index.html",
-    "revision": "6ed680b92f9b833f66a20600fc3dc870"
+    "revision": "d6df2d1d01210ff30ac6bbbf1341a737"
   },
   {
     "url": "uk-ua/index.html",
-    "revision": "43c83f620111e23b546e97a22359d5d6"
+    "revision": "18532b11532de6b70719a157a8712c35"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();

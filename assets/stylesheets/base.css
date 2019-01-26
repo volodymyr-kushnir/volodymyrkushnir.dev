@@ -215,6 +215,11 @@ button:-moz-focusring,
   padding: 0;
 }
 
+/* Utiltities */
+.nowrap {
+  white-space: nowrap;
+}
+
 /* Desktop */
 #desktop {
   max-width: 100%;
@@ -724,6 +729,12 @@ li.details > input {
 .tags {
   font-size: 0.88em;
 }
+.tags.bulleted span:not(:first-child):before {
+  margin: 0 0.25em 0 0.25em;
+  content: "●";
+  font-family: "Arial";
+  font-size: 1rem;
+}
 
 /* Color */
 .color {
@@ -781,13 +792,10 @@ li.details > input {
   display: none;
 }
 #daily li:not(:last-child):after {
-  content: " ";
-  display: inline-block;
-  height: 0.42857142857em;
-  width: 0.42857142857em;
-  background: black;
-  border-radius: 100%;
-  margin: 0.5em 0.42857142857em 0 0.42857142857em;
+  margin: 0 0.25em 0 0.25em;
+  content: "●";
+  font-family: "Arial";
+  font-size: 1rem;
 }
 #daily:after {
   content: " ";
