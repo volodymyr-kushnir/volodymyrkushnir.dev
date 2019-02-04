@@ -227,7 +227,7 @@ button:-moz-focusring,
 }
 
 /* Frame */
-#frame {
+.frame {
   position: absolute;
   left: 2em;
   top: 2em;
@@ -240,7 +240,7 @@ button:-moz-focusring,
   pointer-events: none;
 }
 @media only screen and (max-width: 767px) {
-  #frame {
+  .frame {
     opacity: 0;
     left: 0;
     right: 0;
@@ -250,28 +250,28 @@ button:-moz-focusring,
 }
 
 /* Content */
-#content {
+.content {
   padding: 3em;
 }
 @media only screen and (max-width: 767px) {
-  #content {
+  .content {
     padding: 1em;
   }
 }
 
 /* Avatar */
-#avatar-wrapper {
+.avatar-wrapper {
   padding: 0 1em 0 1em;
   float: right;
   width: 160px;
   margin-top: -1.5em;
 }
-#avatar {
+.avatar {
   position: relative;
   max-width: 15rem;
 }
 @media only screen and (max-width: 767px) {
-  #avatar-wrapper {
+  .avatar-wrapper {
     float: none;
     margin: 2em auto 3em;
     width: 100%;
