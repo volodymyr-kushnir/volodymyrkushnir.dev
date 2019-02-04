@@ -60,7 +60,7 @@
 	</div>
 	<div id="desktop">
 		<div id="page-1" class="page">
-			<div id="frame"></div>
+			<div class="frame"></div>
 			<div class="stackable grid">
 				<div class="row">
 					<div class="three wide center aligned column">
@@ -402,7 +402,7 @@
 		document.getElementById("lviv-rent-months").innerHTML = "paid " + monthsLivingInLviv + " month" + (monthsLivingInLviv === 1 ? "" : "s") + " of rent already";
 		function switchToColor(color) {
 			try {
-				document.getElementById("frame").style.borderColor = color;
+				document.querySelectorAll(".frame").forEach(frame => frame.style.borderColor = color);
 				document.getElementById("avatar").contentDocument.getElementById("circle").setAttribute("fill", color);
 			} catch (e) {}
 		}

@@ -265,7 +265,7 @@ button:-moz-focusring,
 }
 
 /* Frame */
-#frame {
+.frame {
   position: absolute;
   left: 2em;
   top: 2em;
@@ -278,7 +278,7 @@ button:-moz-focusring,
   pointer-events: none;
 }
 @media only screen and (max-width: 767px) {
-  #frame {
+  .frame {
     opacity: 0;
     left: 0;
     right: 0;
@@ -906,7 +906,7 @@ li.details > input {
     padding: 0;
     box-shadow: none;
   }
-  #frame {
+  .frame {
     display: none;
   }
   .grid {
