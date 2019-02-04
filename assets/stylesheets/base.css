@@ -537,20 +537,20 @@ button:-moz-focusring,
 }
 
 /* Avatar */
-#avatar-wrapper {
+.avatar-wrapper {
   padding: 0 1em;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#avatar {
+.avatar {
   position: relative;
   max-width: 15rem;
   display: block;
   flex: 1 0 auto;
 }
 @media only screen and (max-width: 1199px) {
-  #avatar-wrapper {
+  .avatar-wrapper {
     padding: 0;
   }
 }
@@ -912,13 +912,13 @@ li.details > input {
   .grid {
     display: block;
   }
+  .avatar-wrapper {
+    padding: 0;
+  }
   #contacts {
     margin-top: 1em;
   }
   #contacts li a.website {
     display: block;
-  }
-  #avatar-wrapper {
-    padding: 0;
-  }
+  }  
 }

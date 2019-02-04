@@ -59,13 +59,13 @@
 		</div>
 	</div>
 	<div id="desktop">
-		<div id="page-1" class="page">
+		<div class="page">
 			<div class="frame"></div>
 			<div class="stackable grid">
 				<div class="row">
 					<div class="three wide center aligned column">
-						<div id="avatar-wrapper">
-							<object id="avatar" data="./assets/images/avatar.svg" role="img" aria-label="Моё профайл фото"></object>
+						<div class="avatar-wrapper">
+							<object class="avatar" data="./assets/images/avatar.svg" role="img" aria-label="Моё профайл фото"></object>
 						</div>
 					</div>
 					<div class="thirteen wide column">
@@ -402,9 +402,13 @@
 		document.getElementById("lviv-rent-months").innerHTML = "уже заплатил за " + monthsLivingInLviv + " месяцев аренды";
 		function switchToColor(color) {
 			try {
-				document.querySelectorAll(".frame").forEach(frame => frame.style.borderColor = color);
-				document.getElementById("avatar").contentDocument.getElementById("circle").setAttribute("fill", color);
-			} catch (e) {}
+				document.querySelectorAll(".frame").forEach(function(frame) {
+					frame.style.borderColor = color;
+				});
+				document.querySelectorAll(".avatar").forEach(function(avatar) {
+					avatar.contentDocument.getElementById("circle").setAttribute("fill", color)
+				});
+			} catch (error) {}
 		}
 		document.getElementById("midnightblue").addEventListener("click", switchToColor.bind(this, "midnightblue"));
 		document.getElementById("chartreuse").addEventListener("click", switchToColor.bind(this, "chartreuse"));
