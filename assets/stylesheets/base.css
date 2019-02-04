@@ -556,7 +556,7 @@ button:-moz-focusring,
 }
 
 /* Contacts */
-#contacts {
+.contacts {
   list-style: none outside none;
   display: flex;
   flex-wrap: wrap;
@@ -567,55 +567,55 @@ button:-moz-focusring,
   font-size: 0.9em;
   font-weight: 400;
 }
-#contacts li {
+.contacts li {
   margin-bottom: 0.25rem;
   margin-right: 1em;
 }
-#contacts li:before {
+.contacts li:before {
   display: none;
 }
-#contacts li a {
+.contacts li a {
   color: black;
   transition: color 0.2s ease-in-out;
 }
-#contacts li a.facebook:hover {
+.contacts li a.facebook:hover {
   color: #3b5998;
 }
-#contacts li a.github:hover {
+.contacts li a.github:hover {
   color: dimgrey;
 }
-#contacts li a.mail:hover {
+.contacts li a.mail:hover {
   color: dimgrey;
 }
-#contacts li a.skype:hover {
+.contacts li a.skype:hover {
   color: #00aff0;
 }
-#contacts li a.phone:hover {
+.contacts li a.phone:hover {
   color: dimgrey;
 }
-#contacts li a.website {
+.contacts li a.website {
   display: none;
 }
-#contacts li a .icon {
+.contacts li a .icon {
   fill: currentColor;
   height: 1.1428rem;
   vertical-align: text-bottom;
 }
 
 @media only screen and (max-width: 767px) {
-  #name,
-  #contacts {
+  .name,
+  .contacts {
     text-align: center;
   }
-  #contacts li {
+  .contacts li {
     margin-right: 0;
   }
 }
 @media only screen and (max-width: 1199px) {
-  #name {
+  .name {
     margin-bottom: 1em;
   }
-  #contacts {
+  .contacts {
     flex-direction: column;
   }
 }
@@ -781,24 +781,24 @@ li.details > input {
 }
 
 /* Daily */
-#daily {
+.daily {
   padding: 0;
 }
-#daily li {
+.daily li {
   list-style: none outside none;
   display: block;
   float: left;
 }
-#daily li:before {
+.daily li:before {
   display: none;
 }
-#daily li:not(:last-child):after {
+.daily li:not(:last-child):after {
   margin: 0 0.25em 0 0.25em;
   content: "●";
   font-family: "Arial";
   font-size: 1rem;
 }
-#daily:after {
+.daily:after {
   content: " ";
   clear: both;
   display: block;
@@ -915,10 +915,10 @@ li.details > input {
   .avatar-wrapper {
     padding: 0;
   }
-  #contacts {
+  .contacts {
     margin-top: 1em;
   }
-  #contacts li a.website {
+  .contacts li a.website {
     display: block;
   }  
 }

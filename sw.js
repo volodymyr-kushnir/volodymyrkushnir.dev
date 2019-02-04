@@ -137,7 +137,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/stylesheets/base.css",
-    "revision": "0c1c43e69de422ca7e72e0ced915cf02"
+    "revision": "cb609f451770066d34504ddeca52c135"
   },
   {
     "url": "favicon.ico",
@@ -145,7 +145,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "cd69927a52873baf5465f71c19805186"
+    "revision": "9917c3e022642eb47c3afa0f9d415cf6"
   },
   {
     "url": "posts/index.html",
@@ -161,15 +161,15 @@ self.__precacheManifest = [
   },
   {
     "url": "posts/introduction-letter-to-binary-studio/index.html",
-    "revision": "7cbe1023f58be638cf1cb1267350417f"
+    "revision": "77ff89d182f630488b9b33f1c1f76950"
   },
   {
     "url": "ru-ru/index.html",
-    "revision": "11e7ed03e9f8a29068fd9ab129b5bb9e"
+    "revision": "be37fa5422b8d37378a05e259942eb79"
   },
   {
     "url": "uk-ua/index.html",
-    "revision": "08595146eb52ba5fd7904b92c022b2c9"
+    "revision": "f4f5349db84d0b58479455377b810f0e"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
