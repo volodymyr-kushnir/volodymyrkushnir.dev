@@ -37,8 +37,8 @@
 	<link rel="stylesheet" href="./assets/stylesheets/base.css">
 </head>
 <body>
-	<div id="childhood">
-		<a href="./uk-ua/#grown-up" title="Hide childhood photos" class="close">Close</a>
+	<div id="photos">
+		<a href="./uk-ua/#resume" title="Hide childhood photos" class="close">Close</a>
 		<div class="photos">
 			<noscript>
 				<img src="./assets/photos/467536_170309526420601_636909857_o.jpg" alt="Me as a baby">
@@ -58,7 +58,7 @@
 			</noscript>
 		</div>
 	</div>
-	<div id="desktop">
+	<div id="pages">
 		<div class="page">
 			<div class="frame"></div>
 			<div class="stackable grid">
@@ -306,7 +306,7 @@
 									<p><strong>Отримав вітчизняний паспорт</strong> (з традиційно дивакуватим фото, звичайно) &mdash; не можу дочекатися, аби замінити то на новий паспорт громадянина України</p>
 								</li>
 								<li>
-									<a id="grown-up" href="#childhood" title="Show childhood photos">
+									<a id="resume" href="#photos" title="Show childhood photos">
 										<span class="dots">
 											<span class="dot"></span>
 											<span class="dot"></span>
@@ -422,11 +422,11 @@
 				func(item)
 			});
 		}
-		var childhoodPhotos = document.getElementById("childhood").getElementsByClassName("photos")[0];
-		document.getElementById("grown-up").addEventListener("click", function() {
+		var childhoodPhotos = document.getElementById("photos").getElementsByClassName("photos")[0];
+		document.getElementById("resume").addEventListener("click", function() {
 			callFuncOnCollection(childhoodPhotos.getElementsByTagName("NOSCRIPT"), replaceNoscript);
 		});
-		if (window.location.hash === "#childhood") {
+		if (window.location.hash === "#photos") {
 			callFuncOnCollection(childhoodPhotos.getElementsByTagName("NOSCRIPT"), replaceNoscript);
 		}
 		if ("serviceWorker" in navigator) {

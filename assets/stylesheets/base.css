@@ -218,28 +218,28 @@ button:-moz-focusring,
   white-space: nowrap;
 }
 
-/* Desktop */
-#desktop {
+/* Pages */
+#pages {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  #desktop {
+  #pages {
     width: 723px;
     margin-top: calc((100% - 723px) / 2);
     margin-bottom: calc((100% - 723px) / 2);
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  #desktop {
+  #pages {
     width: 933px;
     margin-top: calc((100% - 933px) / 2);
     margin-bottom: calc((100% - 933px) / 2);
   }
 }
 @media only screen and (min-width: 1200px) {
-  #desktop {
+  #pages {
     width: 1127px;
     margin-top: calc((100% - 1127px) / 2);
     margin-bottom: calc((100% - 1127px) / 2);
@@ -806,8 +806,8 @@ li.details > input {
   vertical-align: text-top;
 }
 
-/* Grown-up */
-#grown-up {
+/* Resume */
+#resume {
   color: inherit;
   transition: 0.2s;
   opacity: 0.75;
@@ -815,10 +815,10 @@ li.details > input {
   margin-left: -0.25em;
   display: inline-block;
 }
-#grown-up:hover {
+#resume:hover {
   opacity: 1;
 }
-#grown-up .dots {
+#resume .dots {
   background: #808080;
   color: white;
   padding: 0 0.2em;
@@ -829,7 +829,7 @@ li.details > input {
   float: left;
   margin-right: 0.2857142857em;
 }
-#grown-up .dots .dot {
+#resume .dots .dot {
   float: left;
   height: 0.42857142857em;
   width: 0.42857142857em;
@@ -838,37 +838,37 @@ li.details > input {
   margin-top: 0.2857142857em;
   vertical-align: top;
 }
-#grown-up .dots .dot:not(:last-child) {
+#resume .dots .dot:not(:last-child) {
   margin-right: 0.2142857em;
 }
 
-/* Childhood */
-#childhood {
+/* Photos */
+#photos {
   display: none;
   position: relative;
   height: 100%;
   width: 100%;
 }
-#childhood .photos {
+#photos .photos {
   height: 100%;
   width: 100%;
   overflow: auto;
   display: inline-flex;
   -webkit-overflow-scrolling: touch;
 }
-#childhood .photos img {
+#photos .photos img {
   display: block;
   width: auto;
   height: 100%;
   padding: 4px 0 4px 4px;
 }
-#childhood .photos img:last-child {
+#photos .photos img:last-child {
   padding-right: 4px;
 }
-#childhood:target {
+#photos:target {
   display: block;
 }
-#childhood:target ~ #desktop {
+#photos:target ~ #pages {
   display: none;
 }
 
