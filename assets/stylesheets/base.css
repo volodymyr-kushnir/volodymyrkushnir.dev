@@ -550,6 +550,11 @@ button:-moz-focusring,
   margin-right: 0.5em;
 }
 
+/* Job */
+.job {
+  margin-bottom: 0.25rem;
+}
+
 /* Contacts */
 .contacts {
   list-style: none outside none;
@@ -599,6 +604,7 @@ button:-moz-focusring,
 
 @media only screen and (max-width: 767px) {
   .name,
+  .job,
   .contacts {
     text-align: center;
   }
@@ -607,10 +613,8 @@ button:-moz-focusring,
   }
 }
 @media only screen and (max-width: 1199px) {
-  .name {
-    margin-bottom: 1em;
-  }
   .contacts {
+    margin-top: 1em;
     flex-direction: column;
   }
 }
