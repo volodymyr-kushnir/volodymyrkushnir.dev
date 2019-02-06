@@ -471,7 +471,7 @@ button:-moz-focusring,
   }
 }
 
-/* Mobile only column*/
+/* Mobile only column */
 [class*="mobile only"].grid,
 .grid > [class*="mobile only"].row,
 .grid > [class*="mobile only"].column,
