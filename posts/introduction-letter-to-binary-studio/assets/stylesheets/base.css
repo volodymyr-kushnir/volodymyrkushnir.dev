@@ -170,27 +170,27 @@ button:-moz-focusring,
 }
 
 /* Desktop */
-#desktop {
+#pages {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  #desktop {
+  #pages {
     width: 723px;
     margin-top: calc((100% - 723px) / 2);
     margin-bottom: calc((100% - 723px) / 2);
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  #desktop {
+  #pages {
     width: 933px;
     margin-top: calc((100% - 933px) / 2);
     margin-bottom: calc((100% - 933px) / 2);
   }
 }
 @media only screen and (min-width: 1200px) {
-  #desktop {
+  #pages {
     width: 1127px;
     margin-top: calc((100% - 1127px) / 2);
     margin-bottom: calc((100% - 1127px) / 2);
@@ -200,23 +200,26 @@ button:-moz-focusring,
 /* Page */
 .page {
   position: relative;
-  padding: 4.5em;
+  padding: 3em;
   box-shadow: 0 10px 100px 0 rgba(34, 36, 38, 0.1);
   transition: box-shadow 0.2s linear;
-  margin-bottom: 1em;
 }
-.page:last-child {
-  margin-bottom: 0;
+.page[style^="border-color"] {
+  padding: 4.5em;
 }
-.page:hover {
-  box-shadow: 0 10px 100px 0 rgba(34, 36, 38, 0.3);
-}
-@media only screen and (max-width: 767px) {
-  .page {
-    padding: 0;
-    margin: 0;
-    box-shadow: none;
-  }
+.page[style^="border-color"]:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 2em;
+  top: 2em;
+  right: 2em;
+  bottom: 2em;
+  border-color: inherit;
+  border-width: 1em;
+  border-style: solid;
+  pointer-events: none;
+  transition: border-color 0.2s ease-in-out;
 }
 .page.photo {
   padding: 0;
@@ -225,27 +228,21 @@ button:-moz-focusring,
   width: 100%;
   display: block;
 }
-
-/* Frame */
-.frame {
-  position: absolute;
-  left: 2em;
-  top: 2em;
-  right: 2em;
-  bottom: 2em;
-  border-color: orange;
-  transition: border-color 0.2s ease-in-out;
-  border-width: 1em;
-  border-style: solid;
-  pointer-events: none;
+.page:not(:last-child) {
+  margin-bottom: 1em;
+}
+@media only screen {
+  .page:hover {
+    box-shadow: 0 10px 100px 0 rgba(34, 36, 38, 0.3);
+  }
 }
 @media only screen and (max-width: 767px) {
-  .frame {
-    opacity: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+  .page,
+  .page[style^="border-color"] {
+    padding: 0;
+  }
+  .page[style^="border-color"]:before {
+    display: none;
   }
 }
 
