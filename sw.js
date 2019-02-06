@@ -137,7 +137,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/stylesheets/base.css",
-    "revision": "04981566cd9f1fc4aba08995a6df17e7"
+    "revision": "4dd8e3eb1987ad219044d314710c6675"
   },
   {
     "url": "favicon.ico",
@@ -145,7 +145,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "de1289d27b6e63ee5ee565e8c74b5eaa"
+    "revision": "de95576d9ba13abf74dcab614e8e9c0e"
   },
   {
     "url": "posts/index.html",
@@ -157,19 +157,19 @@ self.__precacheManifest = [
   },
   {
     "url": "posts/introduction-letter-to-binary-studio/assets/stylesheets/base.css",
-    "revision": "bb2c1b7ffc2ed684e0be22b2f024be92"
+    "revision": "f2b4617192b349f7eb2a99c9adf8a77d"
   },
   {
     "url": "posts/introduction-letter-to-binary-studio/index.html",
-    "revision": "77ff89d182f630488b9b33f1c1f76950"
+    "revision": "dff3a3c162478dee59e6b81b93492dbb"
   },
   {
     "url": "ru-ru/index.html",
-    "revision": "aebbea6280811c80e65fdb5bd9f9432b"
+    "revision": "a3b6c94f4c3394e268be16432bba8be9"
   },
   {
     "url": "uk-ua/index.html",
-    "revision": "5d3c49130856ce9854986c63bb5a1c51"
+    "revision": "4974874d3a5f218df5916b9b31c3942d"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();

@@ -59,8 +59,7 @@
 		</div>
 	</div>
 	<div id="pages">
-		<div class="page">
-			<div class="frame"></div>
+		<div class="page" style="border-color: midnightblue;">
 			<div class="stackable grid">
 				<div class="row">
 					<div class="three wide center aligned column">
@@ -397,8 +396,8 @@
 		document.getElementById("lviv-rent-months").innerHTML = "уже заплатил за " + monthsLivingInLviv + " месяцев аренды";
 		function switchToColor(color) {
 			try {
-				document.querySelectorAll(".frame").forEach(function(frame) {
-					frame.style.borderColor = color;
+				document.querySelectorAll(".page").forEach(function(page) {
+					page.style.borderColor = color;
 				});
 				document.querySelectorAll(".avatar").forEach(function(avatar) {
 					avatar.contentDocument.getElementById("circle").setAttribute("fill", color)

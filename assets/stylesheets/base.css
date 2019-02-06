@@ -249,9 +249,26 @@ button:-moz-focusring,
 /* Page */
 .page {
   position: relative;
-  padding: 4.5em;
+  padding: 3em;
   box-shadow: 0 10px 100px 0 rgba(34, 36, 38, 0.1);
   transition: box-shadow 0.2s linear;
+}
+.page[style^="border-color"] {
+  padding: 4.5em;
+}
+.page[style^="border-color"]:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 2em;
+  top: 2em;
+  right: 2em;
+  bottom: 2em;
+  border-color: inherit;
+  border-width: 1em;
+  border-style: solid;
+  pointer-events: none;
+  transition: border-color 0.2s ease-in-out;
 }
 @media only screen {
   .page:hover {
@@ -259,31 +276,12 @@ button:-moz-focusring,
   }
 }
 @media only screen and (max-width: 767px) {
-  .page {
+  .page,
+  .page[style^="border-color"] {
     padding: 0;
   }
-}
-
-/* Frame */
-.frame {
-  position: absolute;
-  left: 2em;
-  top: 2em;
-  right: 2em;
-  bottom: 2em;
-  border-color: midnightblue;
-  transition: border-color 0.2s ease-in-out;
-  border-width: 1em;
-  border-style: solid;
-  pointer-events: none;
-}
-@media only screen and (max-width: 767px) {
-  .frame {
-    opacity: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+  .page[style^="border-color"]:before {
+    display: none;
   }
 }
 
@@ -303,9 +301,6 @@ button:-moz-focusring,
 .grid .grid {
   margin-left: -1em;
   margin-right: -1em;
-}
-.page .grid:first-child {
-  margin: -1.5em;
 }
 
 /* Rows */
