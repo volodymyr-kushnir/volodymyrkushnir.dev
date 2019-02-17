@@ -45,15 +45,15 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/images/og-image.en_US.png",
-    "revision": "c3edaec872166df83e564ef78c0b36e6"
+    "revision": "6f8b2700f912db67395296e9d454a3e6"
   },
   {
     "url": "assets/images/og-image.ru_RU.png",
-    "revision": "b613cad5c522ea521712d46d4d60f663"
+    "revision": "5709789673768eb36d1f542eb1abdc4a"
   },
   {
     "url": "assets/images/og-image.uk_UA.png",
-    "revision": "c3e4db5884523d386732e1fbc51b5402"
+    "revision": "8c3dc1b47fec793eff21f28d0fa32509"
   },
   {
     "url": "assets/images/volodymyr.kushnir-2012.jpg",
@@ -145,7 +145,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "133acc5db17fb828e3634bb57c4c1c77"
+    "revision": "b125810aba0a715745d1384e3baa7de8"
   },
   {
     "url": "posts/index.html",
@@ -165,11 +165,11 @@ self.__precacheManifest = [
   },
   {
     "url": "ru-ru/index.html",
-    "revision": "35d629b49f2238c0dfb47d5f1f2923c2"
+    "revision": "efff5aeb662f7bd8b9129fb80b7e4f8a"
   },
   {
     "url": "uk-ua/index.html",
-    "revision": "466e506e3c314bae946d7e5807bedbf9"
+    "revision": "bbe585eb9137ccf0e005b4e827dc34f2"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
