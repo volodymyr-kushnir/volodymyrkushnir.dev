@@ -285,7 +285,14 @@ button:-moz-focusring,
   }
 }
 
-/* Grid */
+/**
+ * # Semantic UI - 2.4.2
+ * https://github.com/Semantic-Org/Semantic-UI
+ * https://www.semantic-ui.com/
+ * Copyright 2014 Contributors
+ * Released under the MIT license
+ * https://opensource.org/licenses/MIT
+ */
 .grid {
   display: flex;
   flex-direction: row;
@@ -471,7 +478,7 @@ button:-moz-focusring,
   }
 }
 
-/* Mobile only column*/
+/* Mobile only column */
 [class*="mobile only"].grid,
 .grid > [class*="mobile only"].row,
 .grid > [class*="mobile only"].column,

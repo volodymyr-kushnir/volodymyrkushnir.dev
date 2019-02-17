@@ -400,7 +400,7 @@
 					page.style.borderColor = color;
 				});
 				document.querySelectorAll(".avatar").forEach(function(avatar) {
-					avatar.contentDocument.getElementById("circle").setAttribute("fill", color)
+					avatar.contentDocument.getElementById("circle").setAttribute("fill", color);
 				});
 			} catch (error) {}
 		}
@@ -418,7 +418,7 @@
 		}
 		function callFuncOnCollection(collection, func) {
 			Array.prototype.slice.call(collection).map(function (item) {
-				func(item)
+				func(item);
 			});
 		}
 		var childhoodPhotos = document.getElementById("photos").getElementsByClassName("photos")[0];
