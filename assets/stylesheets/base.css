@@ -592,6 +592,9 @@ button:-moz-focusring,
 .contacts li a.skype:hover {
   color: #00aff0;
 }
+.contacts li a.telegram:hover {
+  color: #0088cc;
+}
 .contacts li a.phone:hover {
   color: dimgrey;
 }
