@@ -762,7 +762,10 @@ li.details > input {
   }
   .contacts li a.website {
     display: block;
-  }  
+  }
+  .credits {
+    display: none;
+  }
 }
 
 /* Color */
@@ -902,4 +905,43 @@ li.details > input {
 }
 .close:after {
   transform: rotate(-45deg);
+}
+
+/* Credits */
+.credits {
+  text-align: right;
+  padding: 0.5em;
+  line-height: 1em;
+  opacity: 0.75;
+  transition: opacity 0.2s linear;
+}
+.credits:hover {
+  opacity: 1;
+}
+@media only screen and (max-width: 767px) {
+  .credits {
+    display: none;
+  }
+}
+
+/* Reveal footer */
+main {
+  overflow: auto;
+  margin-bottom: 500px;
+  z-index: 1;
+  background: white;
+  position: relative;
+}
+footer {
+  height: 500px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: midnightblue;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
 }
