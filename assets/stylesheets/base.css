@@ -716,13 +716,13 @@ li.details > input {
   margin: 0;
 }
 .timeline:not(:last-child) {
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
 }
 .timeline > li:before {
   display: none;
 }
 .timeline > li:not(:last-child) {
-  margin-bottom: 1.125em;
+  margin-bottom: 1em;
 }
 .timeline > li p {
   margin: 0;
