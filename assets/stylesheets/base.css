@@ -79,6 +79,9 @@ h6 {
   text-transform: uppercase;
   margin: 0 0 1em 0;
 }
+section {
+  padding: 1em 0;
+}
 p {
   margin: 0 0 1em;
   line-height: 1.4285em;
@@ -218,28 +221,28 @@ button:-moz-focusring,
   white-space: nowrap;
 }
 
-/* Pages */
-#pages {
+/* Article */
+article {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  #pages {
+  article {
     width: 723px;
     margin-top: calc((100% - 723px) / 2);
     margin-bottom: calc((100% - 723px) / 2);
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  #pages {
+  article {
     width: 933px;
     margin-top: calc((100% - 933px) / 2);
     margin-bottom: calc((100% - 933px) / 2);
   }
 }
 @media only screen and (min-width: 1200px) {
-  #pages {
+  article {
     width: 1127px;
     margin-top: calc((100% - 1127px) / 2);
     margin-bottom: calc((100% - 1127px) / 2);
@@ -623,11 +626,6 @@ button:-moz-focusring,
     margin-top: 1em;
     flex-direction: column;
   }
-}
-
-/* Segment */
-.segment {
-  padding: 1em 0;
 }
 
 /* Native <details> element styling */
