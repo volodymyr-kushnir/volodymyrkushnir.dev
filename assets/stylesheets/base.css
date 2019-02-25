@@ -937,12 +937,17 @@ li.details > input {
 
 /* Reveal footer */
 header {
-  position: relative;
-  z-index: 3;
+  position: fixed;
+  z-index: 1;
   background: white;
+  top: 0;
+  left: 0;
+  height: 2em;
+  width: 100%;
 }
 main {
   overflow: auto;
+  margin-top: 2em;
   margin-bottom: 50vh;
   z-index: 2;
   background: white;
