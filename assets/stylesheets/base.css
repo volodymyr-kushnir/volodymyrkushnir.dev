@@ -250,6 +250,7 @@ button:-moz-focusring,
 .page {
   position: relative;
   padding: 3em;
+  background: white;
   box-shadow: 0 10px 100px 0 rgba(34, 36, 38, 0.1);
   transition: box-shadow 0.2s linear;
 }
@@ -592,6 +593,9 @@ button:-moz-focusring,
 .contacts li a.skype:hover {
   color: #00aff0;
 }
+.contacts li a.telegram:hover {
+  color: #0088cc;
+}
 .contacts li a.phone:hover {
   color: dimgrey;
 }
@@ -713,18 +717,18 @@ li.details > input {
   margin: 0;
 }
 .timeline:not(:last-child) {
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
 }
 .timeline > li:before {
   display: none;
 }
 .timeline > li:not(:last-child) {
-  margin-bottom: 1.125em;
+  margin-bottom: 1em;
 }
 .timeline > li p {
   margin: 0;
 }
-.timeline.highlighted {
+.timeline > li.highlighted {
   padding: 0.5em;
   background: #f5f5f5;
   border-radius: 4px;
