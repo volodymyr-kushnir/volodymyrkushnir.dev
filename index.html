@@ -37,7 +37,7 @@
 	<link rel="stylesheet" href="./assets/stylesheets/base.css">
 </head>
 <body>
-	<dialog id="photos">
+	<dialog id="childhood">
 		<a href="#resume" title="Hide childhood photos" class="close">Close</a>
 		<div class="photos">
 			<noscript>
@@ -311,7 +311,7 @@
 										<p><strong>Got my internal passport</strong> (with a traditionally awkward photo, of course) &mdash; can't wait to replace it with a new Passport of the Citizen of Ukraine</p>
 									</li>
 									<li>
-										<a id="resume" href="#photos" title="Show childhood photos">
+										<a id="resume" href="#childhood" title="Show childhood photos">
 											<span class="dots">
 												<span class="dot"></span>
 												<span class="dot"></span>
@@ -428,11 +428,11 @@
 				func(item);
 			});
 		}
-		var childhoodPhotos = document.getElementById("photos").getElementsByClassName("photos")[0];
+		var childhoodPhotos = document.getElementById("childhood").getElementsByClassName("photos")[0];
 		document.getElementById("resume").addEventListener("click", function() {
 			callFuncOnCollection(childhoodPhotos.getElementsByTagName("NOSCRIPT"), replaceNoscript);
 		});
-		if (window.location.hash === "#photos") {
+		if (window.location.hash === "#childhood") {
 			callFuncOnCollection(childhoodPhotos.getElementsByTagName("NOSCRIPT"), replaceNoscript);
 		}
 		if ("serviceWorker" in navigator) {
