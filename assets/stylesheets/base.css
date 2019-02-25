@@ -851,8 +851,8 @@ li.details > input {
   margin-right: 0.2142857em;
 }
 
-/* Photos */
-#photos {
+/* Dialog */
+dialog {
   display: none;
   height: 100%;
   width: 100%;
@@ -865,26 +865,26 @@ li.details > input {
   left: 0;
   background: white;
 }
-#photos .photos {
+dialog .photos {
   height: 100%;
   width: 100%;
   overflow: auto;
   display: inline-flex;
   -webkit-overflow-scrolling: touch;
 }
-#photos .photos img {
+dialog .photos img {
   display: block;
   width: auto;
   height: 100%;
   padding: 4px 0 4px 4px;
 }
-#photos .photos img:last-child {
+dialog .photos img:last-child {
   padding-right: 4px;
 }
-#photos:target {
+dialog:target {
   display: block;
 }
-#photos:target ~ * {
+dialog:target ~ * {
   display: none;
 }
 
@@ -935,7 +935,7 @@ li.details > input {
   }
 }
 
-/* Reveal footer */
+/* Hide header, reveal footer */
 header {
   position: fixed;
   z-index: 1;
@@ -945,9 +945,11 @@ header {
   height: 2em;
   width: 100%;
 }
+header + main {
+  margin-top: 2em;
+}
 main {
   overflow: auto;
-  margin-top: 2em;
   margin-bottom: 50vh;
   z-index: 2;
   background: white;
@@ -966,6 +968,13 @@ footer {
   z-index: 1;
 }
 @media only screen and (max-width: 767px) {
+  header {
+    height: auto;
+    position: relative;
+  }
+  header + main {
+    margin-top: 0;
+  }
   main {
     margin-bottom: 0;
   }
