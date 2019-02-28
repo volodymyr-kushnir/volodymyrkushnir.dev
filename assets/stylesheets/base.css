@@ -740,8 +740,8 @@ li.details > input {
 .timeline > li.bordered:hover {
   background: #fafafa;
 }
-.timeline > li.bordered .details > div,
-.timeline > li.bordered details > div {
+.timeline > li.bordered > ul > .details > div,
+.timeline > li.bordered > ul > details > div {
   padding: 0.5em 0.5em 0.5em 2em;
   border-top: 1px solid rgb(224, 224, 224);
   margin-top: 0.5em;
