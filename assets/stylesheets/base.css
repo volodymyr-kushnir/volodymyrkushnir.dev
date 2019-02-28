@@ -731,6 +731,23 @@ li.details > input {
   background: #f5f5f5;
   border-radius: 4px;
 }
+.timeline > li.bordered {
+  border: 1px solid rgba(0,0,0,0.125);
+  border-radius: 4px;
+  padding: 0.5em;
+  transition: all 0.2s linear;
+}
+.timeline > li.bordered:hover {
+  background: #fafafa;
+}
+.timeline > li.bordered .details > div,
+.timeline > li.bordered details > div {
+  padding: 0.5em 0.5em 0.5em 2em;
+  border-top: 1px solid rgb(224, 224, 224);
+  margin-top: 0.5em;
+  margin-left: -2em;
+  margin-right: -0.5em;
+}
 
 /* Tags */
 .tags.small {
