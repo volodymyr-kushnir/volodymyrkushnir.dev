@@ -126,7 +126,6 @@ ol > li:before {
   color: inherit;
   font-weight: bold;
   font-size: 0.7em;
-  line-height: 1rem;
   font-family: inherit;
   display: flex;
   align-items: center;
@@ -138,6 +137,7 @@ ol.inverted > li:before {
   color: white;
   font-weight: normal;
   height: 1rem;
+  line-height: 1rem;
   margin-top: calc(0.4285rem / 2);
 }
 a {
