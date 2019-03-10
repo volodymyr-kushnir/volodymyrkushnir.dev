@@ -11,7 +11,13 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.0.0/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.1.0/workbox-sw.js");
+
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
@@ -19,6 +25,18 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.0.0/workbox
  * See https://goo.gl/S9QRab
  */
 self.__precacheManifest = [
+  {
+    "url": "assets/documents/introduction-letter-to-binary-studio/assets/photos/1244180_457131501071734_1731017764_o.jpg",
+    "revision": "e54ff1f81e90b5c8b6caff626cef069b"
+  },
+  {
+    "url": "assets/documents/introduction-letter-to-binary-studio/assets/stylesheets/base.css",
+    "revision": "f2b4617192b349f7eb2a99c9adf8a77d"
+  },
+  {
+    "url": "assets/documents/introduction-letter-to-binary-studio/index.html",
+    "revision": "dff3a3c162478dee59e6b81b93492dbb"
+  },
   {
     "url": "assets/images/apple-touch-icon.png",
     "revision": "9910024255790206c64ba1fd3cf272eb"
@@ -145,31 +163,15 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "827ec89230cec1005ba82d67ea8ee9e8"
-  },
-  {
-    "url": "posts/index.html",
-    "revision": "39ce28f66161aa3812f5b8199494b593"
-  },
-  {
-    "url": "posts/introduction-letter-to-binary-studio/assets/photos/1244180_457131501071734_1731017764_o.jpg",
-    "revision": "e54ff1f81e90b5c8b6caff626cef069b"
-  },
-  {
-    "url": "posts/introduction-letter-to-binary-studio/assets/stylesheets/base.css",
-    "revision": "f2b4617192b349f7eb2a99c9adf8a77d"
-  },
-  {
-    "url": "posts/introduction-letter-to-binary-studio/index.html",
-    "revision": "dff3a3c162478dee59e6b81b93492dbb"
+    "revision": "a155411def6b3438aad8a07846c286f0"
   },
   {
     "url": "ru-ru/index.html",
-    "revision": "f0ae9a71f880e763904e4e41fe65bbc1"
+    "revision": "34254a36e3cc742b792fd618d19ad09b"
   },
   {
     "url": "uk-ua/index.html",
-    "revision": "7bea781b4fcbdec5a50c891855c53737"
+    "revision": "7f265c6a5cb8984944a318addf0ff9c7"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
