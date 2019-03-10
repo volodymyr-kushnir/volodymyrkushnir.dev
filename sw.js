@@ -11,7 +11,13 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.0.0/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.1.0/workbox-sw.js");
+
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
@@ -20,16 +26,28 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.0.0/workbox
  */
 self.__precacheManifest = [
   {
+    "url": "assets/documents/introduction-letter-to-binary-studio/assets/photos/1244180_457131501071734_1731017764_o.jpg",
+    "revision": "e54ff1f81e90b5c8b6caff626cef069b"
+  },
+  {
+    "url": "assets/documents/introduction-letter-to-binary-studio/assets/stylesheets/base.css",
+    "revision": "f2b4617192b349f7eb2a99c9adf8a77d"
+  },
+  {
+    "url": "assets/documents/introduction-letter-to-binary-studio/index.html",
+    "revision": "dff3a3c162478dee59e6b81b93492dbb"
+  },
+  {
     "url": "assets/images/apple-touch-icon.png",
     "revision": "9910024255790206c64ba1fd3cf272eb"
   },
   {
     "url": "assets/images/avatar-2012.svg",
-    "revision": "875d5e9fa16d17b2faa4784891cf39f4"
+    "revision": "1aab0b170c4022b1a8c6b7d08be469d9"
   },
   {
     "url": "assets/images/avatar.svg",
-    "revision": "e3715d9b7856999eac310ab8a5de10b1"
+    "revision": "435264b2a9656d605e7610233e52ac05"
   },
   {
     "url": "assets/images/favicon-192x192.png",
@@ -137,7 +155,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/stylesheets/base.css",
-    "revision": "776164397e91a4690ffdb16ec91dbd7f"
+    "revision": "ab584b0337d0ede55c9a85621b82afdb"
   },
   {
     "url": "favicon.ico",
@@ -145,31 +163,15 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "74c129c56c63aa4645317bde4cc5006b"
-  },
-  {
-    "url": "posts/index.html",
-    "revision": "08196cbea8cc9d6b60e23070d5ca5adc"
-  },
-  {
-    "url": "posts/introduction-letter-to-binary-studio/assets/photos/1244180_457131501071734_1731017764_o.jpg",
-    "revision": "e54ff1f81e90b5c8b6caff626cef069b"
-  },
-  {
-    "url": "posts/introduction-letter-to-binary-studio/assets/stylesheets/base.css",
-    "revision": "397e0c5b6b350e488326b392c43c7f52"
-  },
-  {
-    "url": "posts/introduction-letter-to-binary-studio/index.html",
-    "revision": "28e92b5dd693d4dc77d363058a990ed0"
+    "revision": "a155411def6b3438aad8a07846c286f0"
   },
   {
     "url": "ru-ru/index.html",
-    "revision": "24abc41136503ab8e4722baaf56a115e"
+    "revision": "34254a36e3cc742b792fd618d19ad09b"
   },
   {
     "url": "uk-ua/index.html",
-    "revision": "9d88f0d6179fdde0ef5e07e95791d62e"
+    "revision": "7f265c6a5cb8984944a318addf0ff9c7"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
