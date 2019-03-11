@@ -35,7 +35,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/documents/introduction-letter-to-binary-studio/index.html",
-    "revision": "dff3a3c162478dee59e6b81b93492dbb"
+    "revision": "b934b014e671cc9afe5d791617a88e56"
   },
   {
     "url": "assets/images/apple-touch-icon.png",
@@ -155,7 +155,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/stylesheets/base.css",
-    "revision": "ab584b0337d0ede55c9a85621b82afdb"
+    "revision": "b20da0435b785d61faee1645efc439a8"
   },
   {
     "url": "favicon.ico",

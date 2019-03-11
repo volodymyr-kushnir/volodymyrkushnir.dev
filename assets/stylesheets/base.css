@@ -965,10 +965,12 @@ header + main {
 }
 main {
   overflow: auto;
-  margin-bottom: 50vh;
   z-index: 2;
   background: white;
   position: relative;
+}
+main:nth-last-child(3) {
+  margin-bottom: 50vh;
 }
 footer {
   height: 50vh;
@@ -990,7 +992,7 @@ footer {
   header + main {
     margin-top: 0;
   }
-  main {
+  main:nth-last-child(3) {
     margin-bottom: 0;
   }
   footer {
