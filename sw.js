@@ -162,6 +162,26 @@ self.__precacheManifest = [
     "revision": "6394d09c96accf01539abe823e4d2a2c"
   },
   {
+    "url": "forks/dariakorotkykh.com/assets/images/avatar.svg",
+    "revision": "5f553aeccb4b84c42a910f7cb436fdcc"
+  },
+  {
+    "url": "forks/dariakorotkykh.com/assets/images/daria.korotkykh-with-glasses.jpg",
+    "revision": "0d456b74ae8e1f62550d45282edaef70"
+  },
+  {
+    "url": "forks/dariakorotkykh.com/assets/images/daria.korotkykh.jpg",
+    "revision": "2dc8ae106b784226a80ebab11c3e6cdd"
+  },
+  {
+    "url": "forks/dariakorotkykh.com/assets/sounds/EntertainerPersonality.mp3",
+    "revision": "0d62bd538f1ab4694b6e67023ca33967"
+  },
+  {
+    "url": "forks/dariakorotkykh.com/index.html",
+    "revision": "61cfa56c842db27f423913abc1cfa714"
+  },
+  {
     "url": "index.html",
     "revision": "740d57d24b7b3df599396c8c4cca04a0"
   },
