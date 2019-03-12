@@ -708,6 +708,32 @@ li.details > input {
   height: 1.4285em;
 }
 
+/* Highlighted list item */
+li.highlighted {
+  padding: 0.5em;
+  background: rgba(0,0,0,0.04);
+  border-radius: 4px;
+}
+
+/* Bordered list item */
+li.bordered {
+  border: 1px solid rgba(0,0,0,0.125);
+  border-radius: 4px;
+  padding: 0.5em;
+  transition: all 0.2s linear;
+}
+li.bordered:hover {
+  background: #fafafa;
+}
+li.bordered > ul > li.details > div,
+li.bordered > ul > details > div {
+  padding: 0.5em 0.5em 0 2em;
+  border-top: 1px solid rgb(224, 224, 224);
+  margin-top: 0.5em;
+  margin-left: -2em;
+  margin-right: -0.5em;
+}
+
 /* Timeline */
 .timeline {
   list-style: none outside none;
@@ -725,28 +751,6 @@ li.details > input {
 }
 .timeline > li p {
   margin: 0;
-}
-.timeline > li.highlighted {
-  padding: 0.5em;
-  background: #f5f5f5;
-  border-radius: 4px;
-}
-.timeline > li.bordered {
-  border: 1px solid rgba(0,0,0,0.125);
-  border-radius: 4px;
-  padding: 0.5em;
-  transition: all 0.2s linear;
-}
-.timeline > li.bordered:hover {
-  background: #fafafa;
-}
-.timeline > li.bordered > ul > .details > div,
-.timeline > li.bordered > ul > details > div {
-  padding: 0.5em 0.5em 0 2em;
-  border-top: 1px solid rgb(224, 224, 224);
-  margin-top: 0.5em;
-  margin-left: -2em;
-  margin-right: -0.5em;
 }
 
 /* Tags */
