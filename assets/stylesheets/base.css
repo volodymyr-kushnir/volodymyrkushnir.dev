@@ -767,12 +767,11 @@ li.bordered > ul > details > div {
 
 /* Print */
 @media print {
-  .page {
+  .page,
+  .page[style] {
     padding: 0;
     box-shadow: none;
-  }
-  .frame {
-    display: none;
+    border-color: transparent !important;
   }
   .grid {
     display: block;
@@ -1003,5 +1002,17 @@ footer {
     height: auto;
     position: relative;
     padding: 1em;
+  }
+}
+@media print {
+  header,
+  footer {
+    display: none;
+  }
+  header + main {
+    margin-top: 0;
+  }
+  main:nth-last-child(3) {
+    margin-bottom: 0;
   }
 }
