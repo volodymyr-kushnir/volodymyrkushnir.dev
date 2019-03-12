@@ -1,0 +1,3 @@
+[submodule "forks/dariakorotkykh.com"]
+	path = forks/dariakorotkykh.com
+	url = git@github.com:dasha-korotkykh/dariakorotkykh.com.git
