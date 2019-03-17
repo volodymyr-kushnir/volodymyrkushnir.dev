@@ -155,7 +155,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/stylesheets/base.css",
-    "revision": "a64eb2586a2f5d27efb51d8820fe8364"
+    "revision": "040d9089272219f12a437b67c936342e"
   },
   {
     "url": "favicon.ico",
@@ -163,15 +163,15 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "dcf651d1ab8ee1f87edb0172b0d83b20"
+    "revision": "7c157446d4255246efa415db7ae8e5c2"
   },
   {
     "url": "ru-ru/index.html",
-    "revision": "28e9a1ea278b52dda8d60dfb8cc6291d"
+    "revision": "d436a84279f63310cfe65b50f8cab75b"
   },
   {
     "url": "uk-ua/index.html",
-    "revision": "88002c427e56f246dc57e29edb5b1c43"
+    "revision": "2ac103d0ef9fcca22201843adbc55b2f"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});

@@ -818,8 +818,8 @@ li.bordered > ul > details > div {
   background-color: chartreuse;
 }
 
-/* Meh */
-#meh {
+/* Audio button */
+button.audio {
   cursor: pointer;
   background: inherit;
   font: inherit;
@@ -827,7 +827,7 @@ li.bordered > ul > details > div {
   margin: 0;
   padding: 0;
 }
-#meh .icon {
+button.audio svg {
   height: 16px;
   width: 16px;
   vertical-align: text-top;
