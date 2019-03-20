@@ -39,7 +39,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/images/apple-touch-icon.png",
-    "revision": "9910024255790206c64ba1fd3cf272eb"
+    "revision": "a5f8d5f4a667e65f0c6243c4c16a44b2"
   },
   {
     "url": "assets/images/avatar-2012.svg",
@@ -51,15 +51,15 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/images/favicon-192x192.png",
-    "revision": "ae84d25672ad88f425a9d051785c84a9"
+    "revision": "45b49bb32f0901378111d5b7202dc398"
   },
   {
     "url": "assets/images/favicon-512x512.png",
-    "revision": "7f534b3669ea20857355ab67a5921760"
+    "revision": "6d215c3bf0671ac70a8bb01b49ce9a8d"
   },
   {
     "url": "assets/images/favicon.ico",
-    "revision": "6394d09c96accf01539abe823e4d2a2c"
+    "revision": "c843fb2c0998062b21cf5bd7b9b202e1"
   },
   {
     "url": "assets/images/og-image.en_US.png",
@@ -159,7 +159,7 @@ self.__precacheManifest = [
   },
   {
     "url": "favicon.ico",
-    "revision": "6394d09c96accf01539abe823e4d2a2c"
+    "revision": "c843fb2c0998062b21cf5bd7b9b202e1"
   },
   {
     "url": "index.html",
