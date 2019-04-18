@@ -11,6 +11,7 @@ deploy:
     secret_access_key: $SECRET_ACCESS_KEY
     bucket: volodymyrkushnir.com-staging
     region: eu-central-1
+    acl: public_read
     on:
       branch: develop
   - provider: s3
@@ -19,5 +20,6 @@ deploy:
     secret_access_key: $SECRET_ACCESS_KEY
     bucket: volodymyrkushnir.com-production
     region: eu-central-1
+    acl: public_read
     on:
       branch: master
