@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "stable"
+script:
+  - npm install workbox-cli gh-pages
+  - workbox generateSW workbox-config.js
+  - gh-pages -d ./
+deploy:
+  - provider: s3
+    skip_cleanup: true
+    access_key_id: $ACCESS_KEY_ID
+    secret_access_key: $SECRET_ACCESS_KEY
+    bucket: volodymyrkushnir.com
+    region: eu-central-1
+    on:
+      branch: master
