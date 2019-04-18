@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "stable"
 script:
-  - npm install --no-save workbox-cli gh-pages
+  - npm install --global workbox-cli gh-pages
   - workbox generateSW workbox-config.js
   - gh-pages -d ./
 deploy:
