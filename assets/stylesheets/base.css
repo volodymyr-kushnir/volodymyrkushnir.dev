@@ -101,6 +101,7 @@ small {
 ul, ol {
   list-style: none outside none;
   padding-left: 1.5em;
+  margin: 0;
 }
 ol {
   counter-reset: ol-counter;
@@ -121,7 +122,7 @@ ol > li:before {
   counter-increment: ol-counter;
   float: left;
   width: 1rem;
-  border-radius: 2px;
+  border-radius: 0.25em;
   background: transparent;
   color: inherit;
   font-weight: bold;
@@ -130,15 +131,14 @@ ol > li:before {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: calc(-1.5rem + 0.4285rem / 2);
+  margin-left: calc(-1.5rem + 0.5rem / 2);
+  height: 1rem;
+  margin-top: calc((1.4285rem - 1rem) / 2);
 }
 ol.inverted > li:before {
   background: black;
   color: white;
   font-weight: normal;
-  height: 1rem;
-  line-height: 1rem;
-  margin-top: calc(0.4285rem / 2);
 }
 a {
   color: blue;
@@ -658,6 +658,15 @@ details > div:after {
   border-radius: 0;
   background: none;
   transition: 0.2s;
+  cursor: pointer;
+  width: 1.5em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  height: 1.5em;
+  vertical-align: top;
+  outline: none;
 }
 .details > input:after {
   content: " ";
@@ -667,13 +676,13 @@ details > div:after {
   position: relative;
   width: 0.5em;
   height: 0.7em;
+  cursor: pointer;
 }
 .details > input:checked {
   transform: rotate(90deg);
 }
 .details > label.summary {
   cursor: pointer;
-  display: inline-block;
 }
 .details > input:checked ~ div {
   display: block;
@@ -690,6 +699,19 @@ details > div:after {
   display: block;
 }
 
+/* Details as a standalone block */
+div.details > input:first-child {
+  float: left;
+}
+div.details > input:first-child + label {
+  width: calc(100% - 1.5em);
+  padding: 0;
+  display: inline-block;
+}
+div.details > input:first-child + label + .details-body {
+  padding-left: 1.5em;
+}
+
 /* Details as a list item */
 li.details {
   list-style-type: none;
@@ -700,12 +722,6 @@ li.details:before {
 li.details > input {
   float: left;
   margin-left: -1.5em;
-  width: 1.5em;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 auto;
-  height: 1.4285em;
 }
 
 /* Highlighted list item */
