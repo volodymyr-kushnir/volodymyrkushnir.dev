@@ -11,7 +11,7 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.1.0/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
@@ -155,7 +155,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/stylesheets/base.css",
-    "revision": "040d9089272219f12a437b67c936342e"
+    "revision": "7bc48f0b12e22ff1d90c24a404397246"
   },
   {
     "url": "favicon.ico",
@@ -163,7 +163,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "7c157446d4255246efa415db7ae8e5c2"
+    "revision": "0bb23f159bfa219e118dbc2878df2523"
   },
   {
     "url": "ru-ru/index.html",
