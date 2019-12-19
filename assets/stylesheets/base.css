@@ -98,7 +98,8 @@ strong {
 small {
   font-size: 80%;
 }
-ul, ol {
+ul,
+ol {
   list-style: none outside none;
   padding-left: 1.5em;
   margin: 0;
@@ -596,6 +597,9 @@ article {
 .contacts li a.skype:hover {
   color: #00aff0;
 }
+.contacts li a.linkedin:hover {
+  color: #0077b5;
+}
 .contacts li a.telegram:hover {
   color: #0088cc;
 }
@@ -727,13 +731,13 @@ li.details > input {
 /* Highlighted list item */
 li.highlighted {
   padding: 0.5em;
-  background: rgba(0,0,0,0.04);
+  background: rgba(0, 0, 0, 0.04);
   border-radius: 4px;
 }
 
 /* Bordered list item */
 li.bordered {
-  border: 1px solid rgba(0,0,0,0.125);
+  border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 4px;
   padding: 0.5em;
   transition: all 0.2s linear;
