@@ -508,9 +508,10 @@ article {
 }
 .avatar {
   position: relative;
-  max-width: 15rem;
   display: block;
   flex: 1 0 auto;
+  max-width: 15rem;
+  width: 100%;
 }
 @media only screen and (max-width: 1199px) {
   .avatar-wrapper {
