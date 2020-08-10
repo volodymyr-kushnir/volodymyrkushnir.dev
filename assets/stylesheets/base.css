@@ -150,6 +150,13 @@ a[rel="external"]:not(.label):hover,
 a.language:hover span {
   text-decoration: underline;
 }
+code {
+  border: 1px solid #BDBDBD;
+  padding: 0em 0.25em;
+  border-radius: 3px;
+  background: #EEEEEE;
+  font-size: 95%;
+}
 
 /* Prevent `sub` and `sup` elements from affecting the line height in all browsers */
 sub,
