@@ -534,11 +534,29 @@ article {
   border-top: 0.3571428571428571em solid rgba(10, 10, 10, 1);
   width: 33%;
 }
+h6:has(span.divider) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5em;
+}
+h6 > span.divider {
+  flex: 1;
+  opacity: 0.125;
+}
 
 /* Language */
 .language {
   font-weight: 600;
   white-space: nowrap;
+  margin-right: 0.5em;
+}
+.language sup {
+  font-size: 125%;
+  top: -0.0625em;
+}
+.language:has(+ br) {
+  margin-right: 0;
 }
 
 /* Labels */
@@ -553,7 +571,7 @@ article {
   font-weight: 600;
   line-height: 1;
   margin-bottom: 0.5em;
-  padding: 0.5833em 0.833em;
+  padding: 0.375em 0.375em;
   transition: background 0.1s ease;
   -webkit-transition: background 0.1s ease;
 }
@@ -695,6 +713,7 @@ details > div:after {
 }
 .details > label.summary {
   cursor: pointer;
+  display: inline-block;
 }
 .details > input:checked ~ div {
   display: block;
@@ -985,7 +1004,7 @@ dialog:target ~ * {
 header {
   position: fixed;
   z-index: 1;
-  background: white;
+  background: whitesmoke;
   top: 0;
   left: 0;
   height: 2em;
